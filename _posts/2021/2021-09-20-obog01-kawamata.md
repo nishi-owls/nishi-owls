@@ -2,10 +2,9 @@
 tags: visit-obog
 title: 卒業生探訪 - 15期 川俣 慶司<br/>「OB会会長が見てきたOWLSの歴史の先にあるもの」
 image: 2021/kawamata/main.jpg
-social_description: "今からおよそ60年前、まだ“タッチフットボール部”だった時代のOWLSや西高の雰囲気。OWLSでの経験がその後の人生に及ぼした影響。そして、OB会会長として創部100周年に向けて願うことを紐解いていく。"
-social_image: "/assets/images/topics/2021/kawamata/main.jpg"
+social_description: 今からおよそ60年前、まだ“タッチフットボール部”だった時代のOWLSや西高の雰囲気。OWLSでの経験がその後の人生に及ぼした影響。そして、OB会会長として創部100周年に向けて願うことを紐解いていく。
+social_image: /assets/images/topics/2021/kawamata/main.jpg
 ---
-
 <div class="topic-heading">
 <div class="topic-lead">
 連載企画<br/>
@@ -27,7 +26,7 @@ OB会会長が見てきた<br/>OWLSの歴史の先にあるもの
 ### 万全のチームなら<br/>全国制覇も夢ではなかった
 
 <div class="image-box left">
-    <img src="/assets/images/topics/2021/kawamata/kawamata0.jpg" alt="全日本高校タッチフットボール大会写真"><br/>
+<img src="/assets/images/topics/2021/kawamata/kawamata0.jpg" alt="川俣氏写真"><br/>
 <strong>川俣 慶司（かわまた けいし）</strong><br/>
 1944年生まれ。都立西高15期。2007年より現在までOB会会長。<br/>
 西高タッチフットボール部時代はOLとして全国大会3位入賞を果たす。<br/>
