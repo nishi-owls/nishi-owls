@@ -1,0 +1,40 @@
+backend:
+  name: git-gateway
+  branch: netlify
+
+publish_mode: editorial_workflow
+
+media_folder: "assets/images"
+
+collections:
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # TODO check if folder path works
+    fields:
+      - {
+          label: "Tag",
+          name: "tags",
+          widget: "select",
+          options: ["visit-obog", "news"],
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          # TODO use `image`
+          label: "Image for Web",
+          name: "image",
+          widget: "string",
+        }
+      - {
+          label: "Social Description",
+          name: "social_description",
+          widget: "string",
+        }
+      - {
+          # TODO use `image`
+          label: "Image for SNS shared",
+          name: "social_image",
+          widget: "string",
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
