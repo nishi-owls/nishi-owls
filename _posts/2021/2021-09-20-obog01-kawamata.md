@@ -26,8 +26,8 @@ OB会会長が見てきた<br/>OWLSの歴史の先にあるもの
 
 ### 万全のチームなら<br/>全国制覇も夢ではなかった
 
-<div class="image-box left">
-<img src="/assets/images/topics/2021/kawamata/kawamata0.jpg" alt="川俣氏写真"><br/>
+<div class="image-box left">\
+!\[川俣氏写真](/assets/images/topics/2021/kawamata/kawamata0.jpg)<br/>
 <strong>川俣 慶司（かわまた けいし）</strong><br/>
 1944年生まれ。都立西高15期。2007年より現在までOB会会長。<br/>
 西高タッチフットボール部時代はOLとして全国大会3位入賞を果たす。<br/>
