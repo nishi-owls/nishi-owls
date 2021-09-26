@@ -1,5 +1,6 @@
 ---
 tags: news
+cms_id: 01-fall-tokyo-games
 title: 2021年度秋季都大会の組み合わせについて
 ---
 

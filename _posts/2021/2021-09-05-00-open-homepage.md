@@ -1,5 +1,6 @@
 ---
 tags: news
+cms_id: 00-open-homepage
 title: ホームページを開設しました
 ---
 都立西高アメリカンフットボールOWLSのホームページを開設しました。

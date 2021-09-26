@@ -79,7 +79,7 @@
     {% endif %}
     <meta property="twitter:image" content="{{ social_image_url }}" />
 
-    {% if page.url == "/" %}
+    {% if page.url == "/" and jekyll.environment != "production" %}
     <!-- For Netlify CMS -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script>

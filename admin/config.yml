@@ -10,8 +10,12 @@ collections:
   - name: "posts"
     label: "Blog Posts"
     folder: "_posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # TODO check if folder path works
+    identifier_field: "cms_id"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "topics/{{year}}/{{month}}-{{day}}-{{slug}}"
+    path: "{{year}}/{{slug}}"
+    editor:
+      preview: false
     fields:
       - {
           label: "Tag",
@@ -19,22 +23,26 @@ collections:
           widget: "select",
           options: ["visit-obog", "news"],
         }
+      - { label: "URL string", name: "cms_id", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
       - {
-          # TODO use `image`
+          # TODO use `image` or hide this
           label: "Image for Web",
           name: "image",
           widget: "string",
+          required: false,
         }
       - {
-          label: "Social Description",
+          label: "Article Description",
           name: "social_description",
           widget: "string",
+          required: false,
         }
       - {
-          # TODO use `image`
-          label: "Image for SNS shared",
+          # TODO use `image` or hide this
+          label: "Image for SNS card",
           name: "social_image",
           widget: "string",
+          required: false,
         }
       - { label: "Body", name: "body", widget: "markdown" }
