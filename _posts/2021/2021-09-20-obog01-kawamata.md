@@ -1,7 +1,7 @@
 ---
 tags: visit-obog
 title: 卒業生探訪 - 15期 川俣 慶司<br/>「OB会会長が見てきたOWLSの歴史の先にあるもの」
-date: 2021-09-25T09:25:10.255Z
+date: 2021-09-26T09:25:10.255Z
 image: 2021/kawamata/main.jpg
 social_description: 今からおよそ60年前、まだ“タッチフットボール部”だった時代のOWLSや西高の雰囲気。OWLSでの経験がその後の人生に及ぼした影響。そして、OB会会長として創部100周年に向けて願うことを紐解いていく。
 social_image: /assets/images/topics/2021/kawamata/main.jpg
