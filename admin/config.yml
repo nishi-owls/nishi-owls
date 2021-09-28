@@ -26,13 +26,13 @@ collections:
           widget: "select",
           options: ["visit-obog", "news"],
         }
-      - { label: "URL string", name: "cms_id", widget: "string" }
+      - { label: "URL string", name: "cms_id", widget: "hidden" }
       - { label: "Title", name: "title", widget: "string" }
       - {
           # TODO use `image` or hide this
           label: "Image for Web",
           name: "image",
-          widget: "string",
+          widget: "hidden",
           required: false,
         }
       - {
@@ -45,7 +45,7 @@ collections:
           # TODO use `image` or hide this
           label: "Image for SNS card",
           name: "social_image",
-          widget: "string",
+          widget: "hidden",
           required: false,
         }
       - { label: "Body", name: "body", widget: "markdown" }
