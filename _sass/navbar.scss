@@ -92,6 +92,12 @@ $sub-item-height: 40px;
                 // Do not expand menus on touch centric devices.
                 display: none !important;
             }
+
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                // CSS Hack to apply only on IE 10 and 11
+                // See https://stackoverflow.com/questions/18907131/detecting-ie11-using-css-capability-feature-detection
+                display: none !important;
+            }
         }
     }
 

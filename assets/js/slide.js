@@ -1,5 +1,4 @@
 $(function () {
-    nav_resize();
     var timerId = setInterval(function () {
         $("#slideGalley .nav .next").click();
     }, 5000);
@@ -36,19 +35,3 @@ $(function () {
     $("#slideGalley").on('swipeleft', goNext);
     $("#slideGalley").on('swiperight', goPrev);
 });
-
-// TODO find better way to share max width value with css
-function nav_resize() {
-    if ($(window).width() < 1080) {
-        w = $("#slideGalley").width();
-        $("#slideGalley .slide img").css("width", w);	//height is auto changed (css@media)
-        $("#slideGalley .nav img").css("width", w / 20);
-        $("#slideGalley .nav .next, #slideGalley .nav .prev").css("margin-top", -$("#slideGalley .nav img").width());
-    } else {
-        $("#slideGalley .slide img").css("width", 1080);
-        $("#slideGalley .nav img").css("width", "auto");
-        $("#slideGalley .nav .next, #slideGalley .nav .prev").css("margin-top", -50);
-    }
-}
-
-$(window).resize(nav_resize);

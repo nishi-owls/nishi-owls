@@ -169,6 +169,18 @@ a:any-link.game-result-list-row {
         margin-left: auto !important;
         margin-right: auto !important;
     }
+
+    // YouTube embedding...
+    & > iframe[src*="https://www.youtube.com"]
+    {
+        max-width: 100vw;
+        height: auto;
+        // aspect-ratio: attr(width) / attr(height);
+        // TODO according to the below document, the above line should work, but actually not... why...
+        // https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio
+        // Instead, specify normal aspect ratio here:
+        aspect-ratio: 16 / 9;
+    }
 }
 
 table.old-game-table {
