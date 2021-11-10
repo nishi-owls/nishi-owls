@@ -1,5 +1,9 @@
 <!doctype html>
+{% if page.microdarta_html_type %}
+<html itemscope itemtype="{{ page.microdarta_html_type }}">
+{% else %}
 <html lang="ja">
+{% endif %}
 
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
     <meta charset="utf-8">
@@ -24,13 +28,12 @@
     {% if page.url == "/" %}
     {% assign title = site.title %}
     {% elsif page.collection == "games" %}
-    {% assign title = page.date | date: "%-m月%-d日" | append: page.vs | append: "戦 | " | append: site.title %}
+    {% capture title %}{{ page.date | date: "%-m月%-d日" }} {{ page.vs }}戦 | {{ site.title }}{% endcapture %}
     {% elsif page.collection == "game_years" %}
-    {% assign title = page.year | append: "年の試合結果一覧 | " | append: site.title %}
-    {% elsif page.collection == "staffs" %}
-    {% assign title = page.name | append: " （" | append: page.position | append: "） | " | append: site.title %}
+    {% capture title %}{{ page.year }}年の試合結果一覧 | {{ site.title }}{% endcapture %}
     {% else %}
-    {% assign title = page.title | replace: '<br/>', ' '  | replace: '<br />', ' '  | replace: '<br>', ' ' | append: " | " | append: site.title %}
+    {% assign purified_title = page.title | replace: '<br />', ' ' | replace: '<br/>', ' ' | replace: '<br>', ' ' %}
+    {% capture title %}{{ purified_title }} | {{ site.title }}{% endcapture %}
     {% endif %}
     <title>{% if jekyll.environment != "production" %}[DEV] {% endif %}{{ title }}</title>
     <script src="/assets/js/jquery-3.6.0.min.js"></script>

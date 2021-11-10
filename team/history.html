@@ -10,113 +10,23 @@ social_image: "/assets/images/team/history.jpg"
 
 <!-- TODO can we put img after h2? -->
 
+{% for item in site.data.history %}
 <div class="team-history-main-container">
-    <img src="/assets/images/team/history-1949.jpg" alt="初のアメフト試合後の写真">
+    {% if item.image %}
+    <img src={{item.image.picture}} alt={{item.image.alttext}}>
+    {% endif %}
 
-    <h2><span class="year">1948</span> 創部から創成期</h2>
+    <h2><span class="year">{{item.year}}</span> {{item.title}}</h2>
 
     <div class="team-history-content">
+        {% for paragraph in item.content %}
         <p>
-            1948年（西高2期）春創部。当時は「東京都立第十中学校（旧制）」。
+            {{paragraph}}
         </p>
-        <p>
-            戦後の混乱期の中、食べるものや着るものにも苦労しながらも、秋のタッチフットボール公式戦を目指して練習。加えて図書館での英文書籍の研究の成果もあり、関東6校のリーグ戦で4勝1敗。翌年49年は春季リーグ戦全勝優勝。
-        </p>
-        <p>
-            1949年には、初のアメリカンフットボールの試合を麻布高校と行う。
-        </p>
+        {% endfor %}
     </div>
 </div>
-
-<div class="team-history-main-container">
-    <img src="/assets/images/team/history-1952.jpg" alt="甲子園ボウル出場の写真">
-
-    <h2><span class="year">1952</span> 甲子園ボウル初出場</h2>
-
-    <div class="team-history-content">
-        <p>
-            当時タッチフットボール部を持つ高校は、関東で9校であった。
-            その中で、1952年、春秋連続で関東を制し、甲子園ボウルに出場。
-        </p>
-        <p>
-            夜行列車で19時間以上かけて遠征して出場した結果は、関西学院相手に0-47で敗北。
-        </p>
-    </div>
-</div>
-
-<div class="team-history-main-container">
-    <img src="/assets/images/team/history-1961.jpg" alt="1961年の集合写真">
-
-    <h2><span class="year">1954</span> 全国高校タッチフットボール大会が始まる</h2>
-
-    <div class="team-history-content">
-        <p>
-            1954年、全国高校タッチフットボール大会が始まる。初期の大会には出場できなかったものの、1959年を境に、1961年、1962年など、継続的に全国大会に出場。
-        </p>
-        <p>
-            また、1959年は初めて夏合宿を行った記録があり、西高内のトタン屋根の柔道場で寝泊まりをしながら練習したという。
-        </p>
-    </div>
-</div>
-
-<div class="team-history-main-container">
-    <img src="/assets/images/team/history-197x.jpg" alt="1970年頃の集合写真">
-
-    <h2><span class="year">1970頃</span> アメリカンフットボールへの移行</h2>
-
-    <div class="team-history-content">
-        <p>
-            アメフト（当時はアメラグと呼ばれる）は、大学及び、その付属高校の数校が行っているに過ぎず、安全面、費用面など様々な課題があったが、現役の努力に加え、OB・大学などの協力によりアメフトの練習を開始する。
-        </p>
-        <p>
-            1970年秋、関東大会で3位入賞し、第1回全国高校アメリカンフットボール選手権大会出場。初戦の大阪府代表浪速高校との戦いは、第3Qまで0-14とリードされたものの、第4Qでの猛反撃により逆転勝利。
-            しかしその後、2回戦で日大桜丘高校との戦いで敗退。
-        </p>
-    </div>
-</div>
-
-<div class="team-history-main-container">
-    <img src="/assets/images/team/history-1974.jpg" alt="1974年の試合写真">
-
-    <h2><span class="year">1974</span> チームカラーのルーツ</h2>
-
-    <div class="team-history-content">
-        <p>
-            1974年秋大会より、それまでの紺の上着と水色のパンツのユニフォームを一新。
-            南カリフォルニア大学のユニフォームに影響を受けた、えんじとゴールドのユニフォームを使い始める。
-        </p>
-        <p>
-            これが今も受け継がれるチームカラーにつながる。
-        </p>
-    </div>
-</div>
-
-<div class="team-history-main-container">
-    <!--img src="/assets/images/team/history-1974.jpg" alt="1974年の試合写真"-->
-
-    <h2><span class="year">1978</span> 秋季都大会優勝</h2>
-
-    <div class="team-history-content">
-        <p>
-            創部30周年の1978年秋、アメリカンフットボールとなって以降初の都大会優勝を果たす。
-        </p>
-    </div>
-</div>
-
-<div class="team-history-main-container">
-    <img src="/assets/images/team/history-1989.jpg" alt="1989年の試合写真">
-
-    <h2><span class="year">1989</span> 秋季都大会優勝</h2>
-
-    <div class="team-history-content">
-        <p>
-            都大会決勝は、日大三高を30-0で完封。この快挙はNHKで「都立の星」として全国のお茶の間に紹介された。
-        </p>
-        <p>
-            全国大会準々決勝、日大鶴ケ丘高戦は、21-24でリードされた第4Q残り32秒4thダウン、ゴールまで残り2.5ヤード。乾坤一擲のダイブはエンドゾーン寸前で阻まれ、試合が終了した。
-        </p>
-    </div>
-</div>
+{% endfor %}
 
 <p>過去の試合結果については<a href="/game/old-games.html">過去の戦績</a>のページもご覧ください。</p>
 

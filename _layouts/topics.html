@@ -21,4 +21,36 @@ layout: default
     {{ content }}
 </div>
 
+{% for tag in page.tags %}
+
+{% assign p_post = page.previous %}
+{% for unused in site.posts %}{% comment %}actually while-loop{% endcomment %}
+{% if p_post == nil or p_post.tags contains tag %}{% break %}{% endif %}
+{% assign p_post = p_post.previous %}
+{% endfor %}
+
+{% assign n_post = page.next %}
+{% for unused in site.posts %}{% comment %}actually while-loop{% endcomment %}
+{% if n_post == nil or n_post.tags contains tag %}{% break %}{% endif %}
+{% assign n_post = n_post.next %}
+{% endfor %}
+
+<div class="topics-navigation">
+    {% if p_post %}
+    <a href="{{p_post.url}}" class="prev">
+        &laquo; 前の {{ site.data.topics-tags[tag].name }} の記事<br />
+        {{ p_post.title }}
+    </a>
+    {% endif %}
+
+    {% if n_post %}
+    <a href="{{n_post.url}}" class="next">
+        次の {{ site.data.topics-tags[tag].name }} の記事 &raquo;<br />
+        {{ n_post.title }}
+    </a>
+    {% endif %}
+</div>
+
+{% endfor %}
+
 <p><a href="/topics/">トピックス記事一覧へ</a></p>

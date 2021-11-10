@@ -39,5 +39,16 @@
             opacity: 0.8;
             cursor: pointer;
         }
+
+        @include mq(mobile) {
+            .prev,
+            .next {
+                margin-top: -8vw;
+            }
+            img {
+                width: 8vw;
+                height: 16vw;
+            }
+        }
     }
 }

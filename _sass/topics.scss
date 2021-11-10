@@ -1,3 +1,6 @@
+$desktop-content-width: 80%;
+$mobile-content-width: 90%;
+
 // querying #main to override main style.
 #main ul.topics-list {
     display: flex;
@@ -61,12 +64,12 @@
 }
 
 .topics-content-header {
-    width: 80%;
+    width: $desktop-content-width;
     margin: 1em auto 1.5em;
     display: flex;
 
     @include mq(tablet) {
-        width: 90%;
+        width: $mobile-content-width;
     }
 
     .date {
@@ -93,7 +96,7 @@
 }
 
 .topics-content {
-    width: 80%;
+    width: $desktop-content-width;
     margin: 1em auto 3em;
 
     p.footnote {
@@ -104,7 +107,53 @@
     }
 
     @include mq(mobile) {
-        width: 90%;
+        width: $mobile-content-width;
+    }
+}
+
+.topics-navigation {
+    width: $desktop-content-width;
+
+    margin: 1em auto;
+
+    clear: both;
+
+    a {
+        display: block;
+        box-sizing: border-box;
+        width: 45%;
+        font-size: 90%;
+
+        &.prev {
+            float: left;
+            padding-left: 3px;
+        }
+
+        &.next {
+            float: right;
+            text-align: right;
+            padding-right: 3px;
+        }
+
+        &:any-link {
+            text-decoration: none;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &:after {
+        height: 0;
+        visibility: hidden;
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    @include mq(tablet) {
+        width: $mobile-content-width;
     }
 }
 

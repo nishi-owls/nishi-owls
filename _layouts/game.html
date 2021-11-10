@@ -8,7 +8,7 @@ layout: default
 {% assign breadlist = breadlist | append: gameyear.url | append: ", " | append: year | append: "年の試合結果" %}
 {% include breadcrumb.html list=breadlist %}
 
-<h1 id="bg3">試合結果<br />{{ page.game_name }}</h1>
+<h1 id="bg3">{{ page.game_name }}<br />vs. {{ page.vs }}</h1>
 
 <div class="game-navigation">
     {% if page.previous.url %}
