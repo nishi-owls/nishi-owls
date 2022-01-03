@@ -292,6 +292,7 @@ $mobile-content-width: 90%;
         border: #701301 2px solid;
         position: relative;
         box-sizing: border-box;
+        clear: both;
 
         @include mq(tablet) {
             width: 85%;
