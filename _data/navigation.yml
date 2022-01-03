@@ -22,3 +22,8 @@
       link: /message/faq.html
 - name: トピックス
   link: /topics/
+  subitems:
+    - name: ニュース
+      link: /topics/news.html
+    - name: OWLS卒業生探訪
+      link: /topics/visit-obog.html
