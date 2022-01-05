@@ -172,6 +172,12 @@ $mobile-content-width: 90%;
 
         .topic-lead {
             // TODO something more stylish.
+            color: #222;
+
+            a {
+                color: black;
+                text-decoration: none;
+            }
         }
 
         .topic-title {

@@ -8,8 +8,8 @@ social_image: "/assets/images/topics/2021/kawamata/main.jpg"
 
 <div class="topic-heading">
 <div class="topic-lead">
-連載企画<br/>
-「OWLS 卒業生探訪 ～あの期、あの人～」<br/>
+<a href="/topics/visit-obog.html">連載企画<br/>
+「OWLS 卒業生探訪 ～あの期、あの人～」</a><br/>
 Vol.1 15期 川俣 慶司
 </div>
 <div class="topic-title">
