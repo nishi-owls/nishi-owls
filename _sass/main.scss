@@ -23,8 +23,8 @@ header {
     margin-bottom: 5px;
 
     &#owls-logo {
-      width: 90px; // needed for IE, where min() is not supported.
-      width: min(90px, 15vw);
+      width: 90px; // needed for IE, where MIN() is not supported.
+      width: MIN(90px, 15vw);
       height: auto;
     }
   }
@@ -37,14 +37,14 @@ header {
       font-family: "Hammersmith One", sans-serif;
       font-size: 50px;
       line-height: 50px;
-      font-size: min(50px, 8vw);
-      line-height: min(50px, 8vw);
+      font-size: MIN(50px, 8vw);
+      line-height: MIN(50px, 8vw);
     }
     .title2 {
       font-size: 25px;
       line-height: 25px;
-      font-size: min(25px, 4vw);
-      line-height: min(25px, 4vw);
+      font-size: MIN(25px, 4vw);
+      line-height: MIN(25px, 4vw);
     }
   }
 
@@ -54,17 +54,17 @@ header {
     top: 10px;
     right: 10px;
     top: 10px;
-    right: min(10px, 2vw);
-    top: min(10px, 2vw);
+    right: MIN(10px, 2vw);
+    top: MIN(10px, 2vw);
 
     img {
       width: 30px;
-      width: min(30px, 6vw);
+      width: MIN(30px, 6vw);
       height: auto;
       margin-top: 5px;
-      margin-top: min(5px, 1vw);
+      margin-top: MIN(5px, 1vw);
       margin-right: 5px;
-      margin-right: min(10px, 2vw);
+      margin-right: MIN(10px, 2vw);
     }
   }
 
