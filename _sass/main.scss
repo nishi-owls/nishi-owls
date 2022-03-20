@@ -39,6 +39,10 @@ header {
       line-height: 50px;
       font-size: MIN(50px, 8vw);
       line-height: MIN(50px, 8vw);
+
+      .special-subtitle {
+        font-size: MIN(25px, 5vw);
+      }
     }
     .title2 {
       font-size: 25px;
