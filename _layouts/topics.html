@@ -38,14 +38,14 @@ layout: default
 <div class="topics-navigation">
     {% if p_post %}
     <a href="{{p_post.url}}" class="prev">
-        &laquo; 前の {{ site.data.topics-tags[tag].name }} の記事<br />
+        &laquo; 前の記事<br />
         {{ p_post.title }}
     </a>
     {% endif %}
 
     {% if n_post %}
     <a href="{{n_post.url}}" class="next">
-        次の {{ site.data.topics-tags[tag].name }} の記事 &raquo;<br />
+        次の記事 &raquo;<br />
         {{ n_post.title }}
     </a>
     {% endif %}
