@@ -182,7 +182,7 @@ $mobile-content-width: 90%;
 
         .topic-title {
             font-size: 300%;
-            font-size: min(300%, 7vw);
+            font-size: MIN(300%, 7vw);
             margin-top: 1em;
             margin-bottom: 2em;
             font-family: "Noto Serif JP", serif;
@@ -200,7 +200,7 @@ $mobile-content-width: 90%;
             width: 100%;
             box-sizing: border-box;
         }
-        margin: 1em auto;
+        margin: 1em auto 2em;
         line-height: 1.8;
         color: #222;
         font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic",
@@ -210,7 +210,7 @@ $mobile-content-width: 90%;
     h3 {
         margin-left: 10%;
         font-size: 250%;
-        font-size: min(250%, 5vw);
+        font-size: MIN(250%, 5vw);
         font-family: "Noto Serif JP", serif;
         font-weight: bold;
         white-space: nowrap;
@@ -256,7 +256,7 @@ $mobile-content-width: 90%;
         width: 40%;
         box-sizing: border-box;
         padding-top: 1.25em;
-        padding-bottom: 2em;
+        padding-bottom: 1em;
 
         font-size: 80%;
         color: #555;
@@ -292,13 +292,14 @@ $mobile-content-width: 90%;
         border: #701301 2px solid;
         position: relative;
         box-sizing: border-box;
+        clear: both;
 
         @include mq(tablet) {
             width: 85%;
         }
 
         h3 {
-            padding-top: max(1em, 2rem);
+            padding-top: MAX(1em, 2rem);
             margin-left: 0.5em;
             @include mq(mobile) {
                 margin-left: 5px;
