@@ -6,7 +6,12 @@ social_description: "都立西高アメフト部OWLS公式HP。都立西高の�
 <div id="slideGalley">
     <ul class="slide">
         {% for item in site.data.slide %}
-        <li><img src="/assets/images/{{ item.url }}" alt=""></li>
+        {% capture img_content %}<img src="/assets/images/{{ item.url }}" alt="">{% endcapture %}
+        {% if item.link %}
+        <li><a href="{{ item.link }}">{{ img_content }}</a></a></li>
+        {% else %}
+        <li>{{ img_content }}</li>
+        {% endif %}
         {% endfor %}
     </ul>
     <div class="nav">
