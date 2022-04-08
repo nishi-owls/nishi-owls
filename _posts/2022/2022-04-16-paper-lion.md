@@ -9,7 +9,7 @@ social_image: "/assets/images/topics/2022/paperlion.jpg"
 
 フットボール素人の作者がNFLデトロイト・ライオンズのトレーニングキャンプに参加し、選手と同じように練習し、生活した日々を綴った本です。1966年に出版され、アメリカではベストセラーになり、1968年に映画化もされています。
 
-<img src="/assets/images/topics/2022/paperlion-small.jpg" alt="書籍表紙">
+<img src="/assets/images/topics/2022/paperlion-small.jpg" alt="書籍表紙" style="max-width:100%">
 
 | 発行 | 同時代社 |
 | 出版年月 | 2022年2月 |
