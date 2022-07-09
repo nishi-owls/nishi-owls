@@ -111,7 +111,7 @@
         color: #555555;
         font-size: 75%;
 
-        .profile-title {
+        &::first-line {
             font-weight: bold;
             color: black;
             font-size: 130%;
