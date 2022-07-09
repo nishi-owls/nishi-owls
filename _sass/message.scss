@@ -80,43 +80,29 @@
         }
     }
 
-    div.image-box {
+    img {
         float: right;
         margin-left: 10px;
         margin-right: 25px;
         width: 500px;
         max-width: 50%;
+        height: auto;
         box-sizing: border-box;
+        display: block;
 
         &.portrait {
-            width: 300px;
+            width: MIN(300px, 50%);
+
             @include mq(mobile) {
-                width: 100%;
-
-                img {
-                    width: 60%;
-                }
+                width: 60%;
             }
-        }
-
-        img {
-            width: 100%;
-            height: auto;
-        }
-
-        @include mq(tablet) {
-            margin-right: 8px; // same as p
         }
 
         @include mq(mobile) {
-            margin: 8px 0;
-            width: 100%;
+            float: none;
+            margin: 8px auto;
+            width: 80%;
             max-width: 100%;
-            text-align: center;
-
-            img {
-                width: 80%;
-            }
         }
     }
 
