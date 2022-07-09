@@ -28,7 +28,7 @@ social_image: "/assets/images/message/72-izumi1.jpg"
 
 {% for item in featured %}
 <div id="msg-{{ forloop.index }}">
-    {% include message_item.html message=item id=id %}
+    {% include message_item.html message=item %}
 </div>
 {% endfor %}
 
