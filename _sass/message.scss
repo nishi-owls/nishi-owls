@@ -119,6 +119,58 @@
     }
 }
 
+#main ul.other-message-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    li {
+        margin: 20px auto;
+        width: 45%;
+        list-style: none;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+        box-shadow: 3px 3px 3px silver;
+        box-sizing: border-box;
+        padding: 0;
+        border: 1px solid silver;
+
+        a {
+            display: block;
+            padding: 1.5em;
+            padding-right: 0;
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+            font-size: 125%;
+            background: linear-gradient(
+                90deg,
+                white 0%,
+                white 70%,
+                rgba(255, 255, 255, 0.3) 85%,
+                rgba(255, 255, 255, 0.1) 100%
+            );
+        }
+    }
+
+    @include mq(tablet) {
+        li {
+            width: 80%;
+
+            a {
+                padding: 1em 20px;
+            }
+        }
+    }
+
+    @include mq(mobile) {
+        li {
+            width: 90%;
+        }
+    }
+}
+
 // TODO share some logic with .staff-list
 .message-faq {
     display: flex;
