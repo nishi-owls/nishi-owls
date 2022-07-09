@@ -1,4 +1,5 @@
 {
     "editor.formatOnSave": true,
-    "html.format.unformattedContentDelimiter": "<!-- prettier-ignore -->"
+    "html.format.unformattedContentDelimiter": "<!-- prettier-ignore -->",
+    "editor.formatOnSaveMode": "modifications"
 }
