@@ -16,7 +16,7 @@ collections:
     permalink: /game/:name/index.html
   messages:
     output: true
-    permalink: /message/individual/:name
+    permalink: /message/individual/:name.html
   posts:
     permalink: /topics/:year/:month-:day-:title:output_ext
 

@@ -34,7 +34,6 @@ social_image: "/assets/images/message/72-izumi1.jpg"
 
 <h2>他のメッセージ</h2>
 
-<!-- TODO: いい感じにリストをデザインする -->
 {% assign others = "" | split: "" %}
 {% for msg in site.messages %}
 {% assign name = msg.path | split: "/" | last | split: "." | first %}
@@ -43,9 +42,10 @@ social_image: "/assets/images/message/72-izumi1.jpg"
 {% endunless %}
 {% endfor %}
 
-<ul>
+<ul class="other-message-links">
     {% for item in others %}
-    <li><a href="{{ item.url }}">{{ item.author }} - {{ item.title }}</a></li>
+    <li style="background-image: url('{{ item.social_image }}')"><a
+            href="{{ item.url }}">{{ item.author }}<br />{{ item.title }}</a></li>
     {% endfor %}
 </ul>
 
