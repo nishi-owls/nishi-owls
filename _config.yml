@@ -14,6 +14,9 @@ collections:
   game_years:
     output: true
     permalink: /game/:name/index.html
+  messages:
+    output: true
+    permalink: /message/individual/:name
   posts:
     permalink: /topics/:year/:month-:day-:title:output_ext
 
@@ -28,6 +31,11 @@ defaults:
       type: "game_years"
     values:
       layout: "game_year"
+  - scope:
+      path: ""
+      type: "messages"
+    values:
+      layout: "message"
   - scope:
       path: ""
       type: "posts"
