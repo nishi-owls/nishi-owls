@@ -7,6 +7,7 @@ social_image: "/assets/images/message/72-izumi1.jpg"
 {% include breadcrumb.html list="/message/, メッセージ" %}
 
 <h1 id="bg2">活躍中のOBより</h1>
+<!-- TODO: いい感じにリストをデザインする -->
 
 {% assign featured = "" | split: "" %}
 {% for id in site.data.featured-messages %}
@@ -30,5 +31,22 @@ social_image: "/assets/images/message/72-izumi1.jpg"
     {% include message_item.html message=item id=id %}
 </div>
 {% endfor %}
+
+<h2>他のメッセージ</h2>
+
+<!-- TODO: いい感じにリストをデザインする -->
+{% assign others = "" | split: "" %}
+{% for msg in site.messages %}
+{% assign name = msg.path | split: "/" | last | split: "." | first %}
+{% unless site.data.featured-messages contains name %}
+{% assign others = others | push: msg %}
+{% endunless %}
+{% endfor %}
+
+<ul>
+    {% for item in others %}
+    <li><a href="{{ item.url }}">{{ item.author }} - {{ item.title }}</a></li>
+    {% endfor %}
+</ul>
 
 <p style="clear:both"><a href="index.html">メッセージのトップに戻る</a></p>
