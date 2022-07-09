@@ -2,9 +2,10 @@
 layout: default
 ---
 
-{% include breadcrumb.html list="/message/, メッセージ, /message/obog.html , 活躍中のOBより
-" %}
+{% include breadcrumb.html list="/message/, メッセージ, /message/obog.html, 活躍中のOBより" %}
 
 <h1>{{ page.author }}<br />{{ page.title }}</h1>
 
 {% include message_item.html message=page %}
+
+<p style="clear:both"><a href="/message/obog.html">活躍中のOBからのメッセージ トップへ</a></p>
