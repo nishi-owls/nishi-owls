@@ -27,5 +27,5 @@ rbenv使用時は `/.ruby-version` のversion指定が反映されますが、rb
   - From https://about.twitter.com/en/who-we-are/brand-toolkit
 * Instagram logo (assets/images/instagram.png)
   - From https://en.facebookbrand.com/instagram/assets/instagram?audience=instagram-landing
-* Tocca.js libraryr （スワイプ検出用。軽量のため採用。）
+* Tocca.js （スワイプ検出用。軽量のため採用。）
   - From https://github.com/GianlucaGuarini/Tocca.js
