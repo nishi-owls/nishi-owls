@@ -20,42 +20,48 @@
       url: https://tokyo-americanfootball.com/
     - name: 日本社会人アメリカンフットボールアメリカンフットボールXリーグ
       url: https://xleague.jp/
-- title: 関東大学リーグ所属チーム Top 8
+- title: 関東大学1部リーグ所属チーム
   items:
-    - name: 早稲田大学
-      url: http://bigbears.org/
     - name: 法政大学
       url: https://www.hoseiorange.jp/football
+    - name: 早稲田大学
+      url: http://bigbears.org/
     - name: 中央大学
       url: http://cu-raccoons.com/
     - name: 明治大学
       url: https://www.meiji-griffins.net/
-    - name: 立教大学
-      url: https://www.rushersfootball.jp/
-    - name: 東京大学
-      url: http://www.tokyowarriors.com/
-    - name: 日本大学
-      url: https://www.nu-phoenix.net/
     - name: 桜美林大学
       url: https://tncfootball.com/
-- title: 関東大学リーグ所属チーム Big 8
-  items:
+    - name: 立教大学
+      url: https://www.rushersfootball.jp/
+    - name: 日本大学
+      url: https://www.nu-phoenix.net/
+    - name: 東京大学
+      url: http://www.tokyowarriors.com/
     - name: 慶應義塾大学
       url: http://www.keio-unicorns.com/top.php
-    - name: 日本体育大学
-      url: https://nssu-football.com/
     - name: 横浜国立大学
       url: https://mastiffs.jp/
-    - name: 神奈川大学
-      url: https://www.ku-atoms.org/
     - name: 明治学院大学
       url: https://mgu-saints.com/
-    - name: 駒澤大学
-      url: https://ku-bluetide.com/
-    - name: 青山学院大学
-      url: https://agf-lightning-officialhp.jimdofree.com/
     - name: 国士舘大学
       url: https://www.k-rhinoceros.com/
+    - name: 青山学院大学
+      url: https://agf-lightning.com/
+    - name: 駒澤大学
+      url: https://ku-bluetide.com/
+    - name: 日本体育大学
+      url: https://nssu-football.com/
+    - name: 神奈川大学
+      url: https://www.ku-atoms.org/
+    - name: 専修大学
+      url: https://green-machine.jp/
+    - name: 東海大学
+      url: https://tokai-tritons.jp/
+    - name: 上智大学
+      url: https://sophia-goldeneagles.com/
+    - name: 筑波大学
+      url: http://tsa.tsukuba.ac.jp/football/
 - title: 関西大学チーム
   items:
     - name: 立命館大学
@@ -86,56 +92,50 @@
       url: http://tohoku-hornets.com/
     - name: 学芸大学
       url: http://www.tgu-snails.com/
-    - name: 上智大学
-      url: https://sophia-goldeneagles.wixsite.com/ge2016
-    - name: 筑波大学
-      url: http://tsa.tsukuba.ac.jp/football/
 - title: Xリーグチーム
   group_items:
     - items:
+        - name: パナソニックインパルス
+          url: https://panasonic.co.jp/ls/go-go-impulse/
         - name: 富士通フロンティアーズ
           url: https://sports.jp.fujitsu.com/frontiers/
         - name: オービックシーガルズ
           url: https://www.seagulls.jp/
-        - name: パナソニックインパルス
-          url: https://panasonic.co.jp/ls/go-go-impulse/
-        - name: エレコム神戸ファイニーズ
-          url: http://www.finies.com/
-        - name: IBM BigBlue
+        - name: IBM BIG BLUE
           url: http://www.bigblue-football.com/
-        - name: 東京ガスクリエイターズ
-          url: https://tokyogas-creators.com/
-        - name: オール三菱ライオンズ
-          url: http://lions.vc/
         - name: ノジマ相模原ライズ
           url: http://www.sagamihara-rise.com/
-    - items:
+        - name: 東京ガスクリエイターズ
+          url: https://tokyogas-creators.com/
+        - name: エレコム神戸ファイニーズ
+          url: http://www.finies.com/
+        - name: オール三菱ライオンズ
+          url: http://lions.vc/
         - name: アサヒビールシルバースター
           url: https://www.asahibeer.co.jp/silver/
-        - name: 明治安田PentaOceanパイレーツ
-          url: https://www.gopiratesnation.com/
-        - name: 富士ゼロックスミネルヴァAFC
-          url: https://www.minerva-afc.com/
-        - name: 警視庁イーグルス
-          url: https://www.keishicho.metro.tokyo.jp/about_mpd/shokai/katsudo/kidotai/kidotai/dai9kidotai.html
-    - items:
-        - name: ディアーズフットボールクラブ
-          url: http://www.deers.jp/
-        - name: 電通キャタピラーズ
-          url: https://dentsucaterpillars.com/
-        - name: ブルザイズ東京
-          url: https://bullseyes.net/
-        - name: BULLSフットボールクラブ
-          url: https://bulls2020.wixsite.com/bullsfootballclub
-    - items:
         - name: アサヒ飲料クラブチャレンジャーズ
           url: https://challengers-net.com/
         - name: イコールワン福岡SUNS
           url: https://fukuoka-suns.net/
-        - name: 名古屋サイクロンズ
-          url: http://www.cyclones.jp/
+        - name: 胎内ディアーズ
+          url: http://www.deers.jp/
+    - items:
+        - name: 警視庁イーグルス
+          url: https://www.keishicho.metro.tokyo.jp/about_mpd/shokai/katsudo/kidotai/kidotai/dai9kidotai.html
+        - name: PentaOceanパイレーツ
+          url: https://www.gopiratesnation.com/
         - name: アズワンブラックイーグルス
           url: https://www.blackeagles1970.net/
+        - name: 電通キャタピラーズ
+          url: https://dentsucaterpillars.com/
+        - name: 名古屋サイクロンズ
+          url: http://www.cyclones.jp/
+        - name: 富士フィルムミネルヴァAFC
+          url: https://www.minerva-afc.com/
+        - name: 品川CC ブルザイズ
+          url: https://shinagawa.cc/football/
+        - name: 三菱商事 CLUB TRIAX
+          url: https://www.triax.football/
 - title: 関東高校チーム
   items:
     - name: 麻布学園
