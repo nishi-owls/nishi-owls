@@ -1,7 +1,7 @@
 - title: 都立西高
   items:
     - name: 東京都立西高等学校
-      url: http://www.nishi-h.metro.tokyo.jp/
+      url: https://www.metro.ed.jp/nishi-h/
     - name: 東京都立西高等学校同窓会
       url: https://nishi-doso.jp/
 - title: アメリカンフットボール団体
@@ -96,7 +96,7 @@
   group_items:
     - items:
         - name: パナソニックインパルス
-          url: https://panasonic.co.jp/ls/go-go-impulse/
+          url: https://panasonic.co.jp/ew/go-go-impulse/
         - name: 富士通フロンティアーズ
           url: https://sports.jp.fujitsu.com/frontiers/
         - name: オービックシーガルズ
