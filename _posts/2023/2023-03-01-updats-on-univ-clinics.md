@@ -23,7 +23,7 @@ social_image: "/assets/images/topics/2023/03-01-kyodai.jpg"
 
 以下は、各大学のSNSの該当の投稿です。
 
-<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fgangsters.kyoto%2Fposts%2Fpfbid0ggGrqdbBR6fz6fqkvjMV6pn1LkJXjSLMtCNR6Sc3cAfRoFsZsN3c7tvCpZ57syTol&show_text=true&width=500" width="500" height="709" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fgangsters.kyoto%2Fposts%2Fpfbid0ggGrqdbBR6fz6fqkvjMV6pn1LkJXjSLMtCNR6Sc3cAfRoFsZsN3c7tvCpZ57syTol&show_text=true" width="500" height="709" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【中高生向けのスキルクリニックを開催しました❗️】<br>本日御殿下グラウンドにて中高生向けのスキルクリニックを行いました！各パート多くの参加者があり、盛況となりました🏈 <a href="https://t.co/Pz6SP8kINr">pic.twitter.com/Pz6SP8kINr</a></p>&mdash; 東京大学アメフト部WARRIORS (@tokyo_warriors) <a href="https://twitter.com/tokyo_warriors/status/1624748980793151488?ref_src=twsrc%5Etfw">February 12, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
