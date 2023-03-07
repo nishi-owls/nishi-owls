@@ -7,8 +7,7 @@
 
 [Jekyllのチュートリアル](https://jekyllrb-ja.github.io/docs/step-by-step/01-setup/) のステップ1から10全てを実施するのを推奨します。
 
-尚、ステップ1の「インストール」でRubyをインストールする際は最新のver3.0ではなくver2.7をインストールしてください。(3.0だとサイトのビルド時にエラーが発生します。)
-rbenv使用時は `/.ruby-version` のversion指定が反映されますが、rbenvを使用しない環境では気を付けてください。
+尚、rbenv使用時は `/.ruby-version` のversion指定が反映されますが、rbenvを使用しない環境では気を付けてください。
 特にデフォルトではrbenvが使用できないWindowsでは要注意です。
 
 ## ローカル環境でサイトを実行する
