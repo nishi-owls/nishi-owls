@@ -106,12 +106,6 @@ $mobile-content-width: 90%;
         font-size: 75%;
     }
 
-    // Facebook embedding...
-    iframe[src*="https://www.facebook.com"]
-    {
-        max-width: 100%;
-    }
-
     @include mq(mobile) {
         width: $mobile-content-width;
     }
