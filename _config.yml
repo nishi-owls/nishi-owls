@@ -53,9 +53,13 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-paginate-v2
 
 kramdown:
   hard_wrap: true
+
+pagination:
+  enabled: true
 
 exclude:
   - assets_data/

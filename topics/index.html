@@ -1,5 +1,12 @@
 ---
 title: トピックス
+pagination:
+  enabled: true
+  collection: posts
+  per_page: 6
+  permalink: '/topics/page-:num.html'
+  sort_field: 'date'
+  sort_reverse: true
 ---
 
 {% include breadcrumb.html list="" %}
@@ -8,6 +15,21 @@ title: トピックス
 
 <h2>記事一覧</h2>
 
-{% include topics_list.html posts=site.posts %}
+{% include topics_list.html posts=paginator.posts %}
+
+{% if paginator.total_pages > 1 %}
+<ul class="pager">
+    {% if paginator.previous_page %}
+    <li class="previous">
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+    </li>
+    {% endif %}
+    {% if paginator.next_page %}
+    <li class="next">
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+    </li>
+    {% endif %}
+</ul>
+{% endif %}
 
 <p><a href="/">トップページに戻る</a></p>
