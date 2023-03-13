@@ -3,10 +3,13 @@ title: トピックス
 pagination:
   enabled: true
   collection: posts
-  per_page: 6
+  per_page: 12
   permalink: '/topics/page-:num.html'
   sort_field: 'date'
   sort_reverse: true
+  trail:
+    before: 2
+    after: 2
 ---
 
 {% include breadcrumb.html list="" %}
@@ -18,18 +21,27 @@ pagination:
 {% include topics_list.html posts=paginator.posts %}
 
 {% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
+    <ul class="pager">
+        {% if paginator.previous_page %}
+            <li class="previous">
+                <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">前へ</a>
+            </li>
+        {% endif %}
+
+        {% if paginator.page_trail %}
+            {% for trail in paginator.page_trail %}
+                <li {% if page.url == trail.path %}class="selected"{% endif %}>
+                    <a href="{{ trail.path | prepend: site.baseurl | replace: '//', '/' }}" title="{{trail.title}}">{{ trail.num }}</a>
+                </li>
+            {% endfor %}
+        {% endif %}
+
+        {% if paginator.next_page %}
+            <li class="next">
+                <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">次へ</a>
+            </li>
+        {% endif %}
+    </ul>
 {% endif %}
 
 <p><a href="/">トップページに戻る</a></p>
