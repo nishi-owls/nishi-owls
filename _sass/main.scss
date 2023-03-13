@@ -541,3 +541,53 @@ ruby {
     }
   }
 }
+
+#main ul.pager {
+  text-align: center;
+  list-style: none;
+
+  li {
+    display: inline;
+    padding: 0;
+    margin: 5px 0;
+    list-style: none;
+    text-align: center;
+
+    a:any-link {
+      display: inline-block;
+      padding: 8px 12px;
+      text-decoration: none;
+
+      background: white;
+      color: #303030;
+      border: 1px solid silver;
+
+      &:hover {
+        background-color: rgb(212, 212, 212);
+      }
+
+      @include mq(mobile) {
+        padding: 8px;
+      }
+    }
+
+    &:first-child a {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+
+    &:last-child a {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+  }
+
+  .selected a:any-link {
+    background: #c00000;
+    color: white;
+
+    &:hover {
+      background-color: #c00000;
+    }
+  }
+}
