@@ -1,5 +1,17 @@
 ---
 title: ニュース記事一覧
+pagination:
+  enabled: true
+  collection: posts
+  tag: news
+  per_page: 12
+  permalink: '/topics/news-:num.html'
+  indexpage: 'news'
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
 ---
 
 {% include breadcrumb.html list="/topics/, トピックス" %}
@@ -8,6 +20,8 @@ title: ニュース記事一覧
 
 <h2>記事一覧</h2>
 
-{% include topics_list.html posts=site.tags.news %}
+{% include topics_list.html posts=paginator.posts %}
+
+{% include paginator.html paginator=paginator %}
 
 <p><a href="index.html">トピックス一覧へ戻る</a></p>
