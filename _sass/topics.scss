@@ -109,6 +109,60 @@ $mobile-content-width: 90%;
     @include mq(mobile) {
         width: $mobile-content-width;
     }
+
+    .image-box {
+        &.right {
+            float: right;
+            padding-left: 2em;
+            margin-right: 10%;
+            @include mq(tablet) {
+                margin-right: 5%;
+            }
+        }
+        &.left {
+            float: left;
+            padding-right: 2em;
+            margin-left: 10%;
+            @include mq(tablet) {
+                margin-left: 5%;
+            }
+        }
+        &.w200 {
+            max-width: 200px;
+        }
+
+        width: 40%;
+        box-sizing: border-box;
+        padding-top: 1.25em;
+        padding-bottom: 1em;
+
+        font-size: 80%;
+        color: #555;
+
+        strong {
+            color: black;
+            font-size: 120%;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        @include mq(mobile) {
+            margin: 1em auto;
+            width: 80%;
+            box-sizing: border-box;
+
+            &.right,
+            &.left {
+                margin: 0 auto;
+                padding-right: 0;
+                padding-left: 0;
+                float: none;
+            }
+        }
+    }
 }
 
 .topics-navigation {
@@ -230,60 +284,6 @@ $mobile-content-width: 90%;
 
     sup {
         font-size: 75%;
-    }
-
-    .image-box {
-        &.right {
-            float: right;
-            padding-left: 2em;
-            margin-right: 10%;
-            @include mq(tablet) {
-                margin-right: 5%;
-            }
-        }
-        &.left {
-            float: left;
-            padding-right: 2em;
-            margin-left: 10%;
-            @include mq(tablet) {
-                margin-left: 5%;
-            }
-        }
-        &.w200 {
-            max-width: 200px;
-        }
-
-        width: 40%;
-        box-sizing: border-box;
-        padding-top: 1.25em;
-        padding-bottom: 1em;
-
-        font-size: 80%;
-        color: #555;
-
-        strong {
-            color: black;
-            font-size: 120%;
-        }
-
-        img {
-            width: 100%;
-            height: auto;
-        }
-
-        @include mq(mobile) {
-            margin: 1em auto;
-            width: 80%;
-            box-sizing: border-box;
-
-            &.right,
-            &.left {
-                margin: 0 auto;
-                padding-right: 0;
-                padding-left: 0;
-                float: none;
-            }
-        }
     }
 
     .column {
