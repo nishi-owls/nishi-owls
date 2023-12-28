@@ -21,6 +21,8 @@ module Jekyll
           "tag"      => "/tag/:name/",
           "category" => "/category/:name/",
         },
+        # TODO: extend to support archives per collection
+        "collection" => "posts",
       }.freeze
 
       def initialize(config = {})
@@ -39,7 +41,7 @@ module Jekyll
         return if @config.nil?
 
         @site = site
-        @posts = site.posts
+        @posts = site.collections[@config["collection"]]
         @archives = []
 
         @site.config["jekyll-archives"] = @config

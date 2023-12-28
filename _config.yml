@@ -12,8 +12,7 @@ collections:
     output: true
     permalink: /game/:year/:name.html
   game_years:
-    output: true
-    permalink: /game/:name/index.html
+    output: false
   messages:
     output: true
     permalink: /message/individual/:name.html
@@ -26,11 +25,6 @@ defaults:
       type: "games"
     values:
       layout: "game"
-  - scope:
-      path: ""
-      type: "game_years"
-    values:
-      layout: "game_year"
   - scope:
       path: ""
       type: "messages"
@@ -60,6 +54,14 @@ kramdown:
 
 pagination:
   enabled: true
+
+jekyll-archives:
+  collection: "games"
+  enabled: [year]
+  layouts:
+    year: game_year
+  permalinks:
+    year: '/game/:year/'
 
 exclude:
   - assets_data/
