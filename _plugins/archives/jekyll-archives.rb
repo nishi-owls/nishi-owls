@@ -7,7 +7,6 @@ module Jekyll
     # Internal requires
     autoload :Archive,  "jekyll-archives/archive"
     autoload :PageDrop, "jekyll-archives/page_drop"
-    autoload :VERSION,  "jekyll-archives/version"
 
     class Archives < Jekyll::Generator
       safe true
