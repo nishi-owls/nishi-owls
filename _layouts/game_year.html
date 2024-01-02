@@ -25,16 +25,15 @@ layout: default
 {% include games_list.html games=games_spring %}
 {% endif %}
 
-{% comment %}TODO: support prev/next from archive{% endcomment %}
 <div class="game-navigation">
     {% if page.previous.url %}
     <a href="{{page.previous.url}}" class="prev">
-        &laquo; {{ page.previous.year }}年
+        &laquo; {{ page.previous.date | date: "%Y" }}年
     </a>
     {% endif %}
     {% if page.next.url %}
     <a href="{{page.next.url}}" class="next">
-        {{ page.next.year }}年 &raquo;
+        {{ page.next.date | date: "%Y" }}年 &raquo;
     </a>
     {% endif %}
 </div>
