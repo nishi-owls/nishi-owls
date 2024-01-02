@@ -4,6 +4,7 @@ module Jekyll
   module Archives
     class Archive < Jekyll::Page
       attr_accessor :posts, :type, :slug
+      attr_accessor :next, :previous
 
       # Attributes for Liquid templates
       ATTRIBUTES_FOR_LIQUID = %w(
@@ -12,7 +13,9 @@ module Jekyll
         title
         date
         name
+        next
         path
+        previous
         url
         permalink
       ).freeze

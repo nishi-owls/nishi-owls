@@ -76,13 +76,23 @@ module Jekyll
       end
 
       def read_dates
+        y_archives = []
+        m_archives = []
+        d_archives = []
         years.each do |year, y_posts|
-          append_enabled_date_type({ :year => year }, "year", y_posts)
+          append_enabled_date_type({ :year => year }, "year", y_posts, y_archives)
           months(y_posts).each do |month, m_posts|
-            append_enabled_date_type({ :year => year, :month => month }, "month", m_posts)
+            append_enabled_date_type({ :year => year, :month => month }, "month", m_posts, m_archives)
             days(m_posts).each do |day, d_posts|
-              append_enabled_date_type({ :year => year, :month => month, :day => day }, "day", d_posts)
+              append_enabled_date_type({ :year => year, :month => month, :day => day }, "day", d_posts, d_archives)
             end
+          end
+        end
+
+        [y_archives, m_archives, d_archives].each do |arr|
+          arr.each_with_index do |archive, idx|
+            archive.previous = arr[idx - 1] if archive != arr.first
+            archive.next = arr[idx + 1] if archive != arr.last
           end
         end
       end
@@ -120,11 +130,16 @@ module Jekyll
       # Initialize a new Archive page and append to base array if the associated date `type`
       # has been enabled by configuration.
       #
-      # meta  - A Hash of the year / month / day as applicable for date.
-      # type  - The type of date archive.
-      # posts - The array of posts that belong in the date archive.
-      def append_enabled_date_type(meta, type, posts)
-        @archives << Archive.new(@site, meta, type, posts) if enabled?(type)
+      # meta          - A Hash of the year / month / day as applicable for date.
+      # type          - The type of date archive.
+      # posts         - The array of posts that belong in the date archive.
+      # archives_part - The array of archives that the added archive shuold be added to.
+      def append_enabled_date_type(meta, type, posts, archives_part)
+        if enabled?(type)
+          archive = Archive.new(@site, meta, type, posts)
+          @archives << archive
+          archives_part << archive
+        end
       end
 
       # Custom `post_attr_hash` for date type archives.
