@@ -127,6 +127,10 @@ $mobile-content-width: 90%;
                 margin-left: 5%;
             }
         }
+        &.center {
+            width: 60%;
+            margin: auto auto;
+        }
         &.w200 {
             max-width: 200px;
         }
