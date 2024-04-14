@@ -3,9 +3,8 @@ layout: default
 ---
 
 {% assign year = page.date | date : "%Y" | plus: 0 %}
-{% assign gameyear = site.game_years | where: "year", year | first %}
 {% assign breadlist = "/game/, 試合結果, " %}
-{% assign breadlist = breadlist | append: gameyear.url | append: ", " | append: year | append: "年の試合結果" %}
+{% assign breadlist = breadlist | append: "/game/" | append: year | append: "/, " | append: year | append: "年の試合結果" %}
 {% include breadcrumb.html list=breadlist %}
 
 <h1 id="bg3">{{ page.game_name }}<br />vs. {{ page.vs }}</h1>
@@ -73,4 +72,4 @@ layout: default
     {% endif %}
 </div>
 
-<p><a href="{{ gameyear.url }}">{{ year }}年の試合結果一覧へ</a></p>
+<p><a href="/game/{{ year }}">{{ year }}年の試合結果一覧へ</a></p>
