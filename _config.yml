@@ -64,6 +64,7 @@ jekyll-archives:
     year: '/game/:year/'
 
 exclude:
+  - _tools/
   - assets_data/
   - Gemfile
   - Gemfile.lock

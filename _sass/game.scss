@@ -62,7 +62,7 @@ table.game-result-detail {
         font-size: 120%;
     }
     @include mq(mobile) {
-        font-size: 100%;
+        font-size: 110%;
     }
 
     th,
@@ -252,5 +252,34 @@ table.old-game-table {
         margin: 0 1em 1em;
         white-space: pre-line;
         font-size: 90%;
+    }
+}
+
+table.possessions {
+    margin: 1em auto;
+
+    td {
+        padding: 0 1em;
+    }
+
+    th,
+    td {
+        text-align: center;
+        border-bottom: 1px solid silver;
+
+        @include mq(tablet) {
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+    }
+
+    th {
+        background-color: #f3f3f3;
+        border-top: 1px solid silver;
+    }
+
+    @include mq(mobile) {
+        font-size: 90%;
+        text-align: right;
     }
 }
