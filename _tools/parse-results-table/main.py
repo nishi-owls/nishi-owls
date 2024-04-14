@@ -17,6 +17,12 @@ Testing:
 """
 
 
+PRINT_PREFIX = """
+## ポゼッション・シリーズ結果 <br/>（プレー数 / シリーズ更新数）
+"""
+
+PRINT_SUFFIX = "{: .possessions}"
+
 MAX_SINGLE_COLUMN_SPACES = 15
 
 PLACEHOLDER_FOR_SPACE = '<SPACE>'
@@ -79,8 +85,10 @@ for line in sys.stdin:
     else:
         raise Exception("Unexpected pattern of strings: " + line)
 
+print(PRINT_PREFIX)
 for i, row in enumerate(rows):
     row = map(process_item_before_print, row)
     print('| ' + ' | '.join(row) + ' |')
     if i == 0:
         print('|--|--|--|')
+print(PRINT_SUFFIX)
