@@ -18,3 +18,5 @@ social_image: /assets/images/topics/2024/04-19-dumbbell-thumb.jpg
 {: .image-box .center}
 
 今回は、エニタイムフィットネスの運営会社である株式会社Fast Fitness Japanによる、誰もがフィットネスにつながる機会の創出を目的としたトレーニングマシンの寄贈活動の一貫として、Precor Japan株式会社に、OWLS OB会にダンベルを寄贈していただき、OWLSの現役へ届けました。この度はありがとうございました。
+
+* [エニタイムフィットネスのニュースリリースはこちら](https://www.anytimefitness.co.jp/news_240418/)
