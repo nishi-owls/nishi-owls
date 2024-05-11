@@ -6,7 +6,7 @@
       url: https://nishi-doso.jp/
 - title: アメリカンフットボール団体
   items:
-    - name: アメリカンフットボール協会
+    - name: 日本アメリカンフットボール協会
       url: https://americanfootball.jp/
     - name: 関東学生アメリカンフットボール連盟
       url: http://www.kcfa.jp/
@@ -20,7 +20,7 @@
       url: https://tokyo-americanfootball.com/
     - name: 日本社会人アメリカンフットボールアメリカンフットボールXリーグ
       url: https://xleague.jp/
-- title: 関東大学1部リーグ所属チーム
+- title: 主な東日本大学チーム
   items:
     - name: 法政大学
       url: https://www.hoseiorange.jp/football
@@ -34,12 +34,10 @@
       url: https://tncfootball.com/
     - name: 立教大学
       url: https://www.rushersfootball.jp/
-    - name: 日本大学
-      url: https://www.nu-phoenix.net/
     - name: 東京大学
       url: http://www.tokyowarriors.com/
     - name: 慶應義塾大学
-      url: http://www.keio-unicorns.com/top.php
+      url: https://keiouniv-unicorns.com/
     - name: 横浜国立大学
       url: https://mastiffs.jp/
     - name: 明治学院大学
@@ -62,7 +60,17 @@
       url: https://sophia-goldeneagles.com/
     - name: 筑波大学
       url: http://tsa.tsukuba.ac.jp/football/
-- title: 関西大学チーム
+    - name: 一橋大学
+      url: https://crimsonfootball.jp/
+    - name: 東京工業大学
+      url: https://titech-buffaloes.com/
+    - name: 北海道大学
+      url: https://biggreen-hu.jimdofree.com/
+    - name: 東北大学
+      url: http://tohoku-hornets.com/
+    - name: 学芸大学
+      url: http://www.tgu-snails.com/
+- title: 主な西日本大学チーム
   items:
     - name: 立命館大学
       url: http://www.ritsumeikanpanthers.com/
@@ -80,19 +88,7 @@
       url: http://www.wildrover-net.com/
     - name: 桃山学院大学
       url: https://www.st-andrew-afc.com/
-- title: 主なOBプレイ実績大学
-  items:
-    - name: 一橋大学
-      url: https://crimsonfootball.jp/
-    - name: 東京工業大学
-      url: https://titech-buffaloes.com/
-    - name: 北海道大学
-      url: https://biggreen-hu.jimdofree.com/
-    - name: 東北大学
-      url: http://tohoku-hornets.com/
-    - name: 学芸大学
-      url: http://www.tgu-snails.com/
-- title: Xリーグチーム
+- title: 主なXリーグチーム
   group_items:
     - items:
         - name: パナソニックインパルス
@@ -115,15 +111,15 @@
           url: https://www.asahibeer.co.jp/silver/
         - name: アサヒ飲料クラブチャレンジャーズ
           url: https://challengers-net.com/
-        - name: イコールワン福岡SUNS
+        - name: 福岡SUNS
           url: https://fukuoka-suns.net/
-        - name: 胎内ディアーズ
+        - name: 胎内DEERS
           url: http://www.deers.jp/
     - items:
         - name: 警視庁イーグルス
-          url: https://www.keishicho.metro.tokyo.jp/about_mpd/shokai/katsudo/kidotai/kidotai/dai9kidotai.html
-        - name: PentaOceanパイレーツ
-          url: https://www.gopiratesnation.com/
+          url: https://www.keishicho.metro.tokyo.lg.jp/about_mpd/shokai/katsudo/kidotai/kidotai/dai9kidotai.html
+        - name: PentaOcean パイレーツ
+          url: https://piratesnation.jp/
         - name: アズワンブラックイーグルス
           url: https://www.blackeagles1970.net/
         - name: 電通キャタピラーズ
@@ -144,14 +140,12 @@
       url: http://lotus.spo-sta.com/
     - name: 駒場学園
       url: http://www.fightinggorillas.com/
-    - name: 都立富士高校
-      url: http://fuji-stallions.com/
     - name: 明治学院
       url: http://www.mghs-hepburns.net/
+    - name: ​早稲田大学高等学院
+      url: https://www.waseda-bears.com/
     - name: 法政大学第二高等学校
       url: https://www.hosei2football.com/
-    - name: 慶應義塾大学
-      url: http://www.keio-unicorns.com/high/hightoppage.html
     - name: 横浜高校
       url: http://www2.yokohama-jsh.ac.jp/mmt/amefuto/index2.htm
     - name: 立教新座高校
