@@ -22,8 +22,8 @@
 
 * Facebook logo (assets/images/facebook.png)
   - From https://ja.facebookbrand.com/facebookapp/
-* Twitter logo (assets/images/twitter.png)
-  - From https://about.twitter.com/en/who-we-are/brand-toolkit
+* X logo (assets/images/x-black.png, x-white.png)
+  - From https://about.x.com/en/who-we-are/brand-toolkit
 * Instagram logo (assets/images/instagram.png)
   - From https://en.facebookbrand.com/instagram/assets/instagram?audience=instagram-landing
 * Tocca.js （スワイプ検出用。軽量のため採用。）
