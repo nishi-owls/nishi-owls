@@ -1,5 +1,5 @@
 ---
-title: （タイトル）
+title: アメフトを通じて得たもの
 author: 72期 前更 斗真
 social_image: /assets/images/message/72-maesara1.jpg
 ---

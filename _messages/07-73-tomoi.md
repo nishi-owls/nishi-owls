@@ -1,5 +1,5 @@
 ---
-title: （タイトル）
+title: 逆境に挑む
 author: 73期 友井 幹太
 social_image: /assets/images/message/73-tomoi1.jpg
 ---
