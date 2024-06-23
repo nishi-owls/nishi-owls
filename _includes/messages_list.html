@@ -1,13 +1,6 @@
 <ul class="message-links">
     {% for item in include.messages %}
-    {%- assign url = false -%}
-    {%- assign name = item.path | split: "/" | last | split: "." | first -%}
-    {%- for feature in site.data.featured-messages -%}
-    {%- if feature == name -%}
-    {%- capture url %}/message/obog.html#msg-{{ forloop.index }}{% endcapture -%}
-    {%- endif %}{% endfor -%}
-    {%- unless url %}{% assign url = item.url %}{% endunless -%}
-    <li style="background-image: url('{{ item.social_image }}')"><a href="{{ url }}">{{ item.author }}<br />{{
+    <li style="background-image: url('{{ item.social_image }}')"><a href="{{ item.url }}">{{ item.author }}<br />{{
             item.title }}</a></li>
     {% endfor %}
 </ul>

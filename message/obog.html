@@ -17,11 +17,14 @@ social_image: "/assets/images/message/obog-og.jpg"
 {% endif %}
 {% endfor %}{% endfor %}
 
-{% include messages_list.html messages=featured %}
+{%- comment -%}
+TODO: CSSで記事の後半を隠しているが、そもそもHTMLにも不要なのでいい感じに削れると良い。
+{%- endcomment -%}
 
 {% for item in featured %}
-<div id="msg-{{ forloop.index }}">
+<div id="msg-{{ forloop.index }}" class="ob-message-top-box">
     {% include message_item.html message=item %}
+    <div class="readmore"><a href="{{ item.url }}">続きを読む</a></div>
 </div>
 {% endfor %}
 
