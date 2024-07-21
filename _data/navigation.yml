@@ -9,6 +9,8 @@
       link: /team/member.html
     - name: コーチ・スタッフ
       link: /team/staff.html
+    - name: 安全への取り組み
+      link:  /team/safety.html
 - name: 試合
   link: /game/
 - name: メッセージ
