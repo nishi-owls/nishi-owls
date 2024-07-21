@@ -10,7 +10,7 @@ social_image: "/assets/images/team/staff.jpg"
 
 <div class="staff-list">
     {% for staff in site.data.staff %}
-    <div class="staff-box">
+    <div class="staff-box" id="{{ staff.name }}">
         <h2>{{ staff.position }}<br />{{ staff.name }}</h2>
         <div class="staff-main">
             <img src="/assets/images/staff/{% if staff.photo %}{{ staff.photo }}{% else %}no_image.gif{% endif %}"
