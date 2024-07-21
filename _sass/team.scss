@@ -354,3 +354,22 @@ table.team-member-table {
         }
     }
 }
+
+.team-safety-body {
+    width: 90%;
+    margin: 0 auto;
+
+    p {
+        margin: 1.5em 0;
+    }
+
+    img {
+        width: 60%;
+        @include mq(mobile) {
+            width: 100%;
+        }
+        height: auto;
+        margin: 1em auto;
+        display: block;
+    }
+}
