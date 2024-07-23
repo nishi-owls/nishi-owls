@@ -364,9 +364,9 @@ table.team-member-table {
     }
 
     img {
-        width: 50%;
+        max-width: 50%;
         @include mq(mobile) {
-            width: 100%;
+            max-width: 100%;
         }
         height: auto;
         margin: 1em auto;
