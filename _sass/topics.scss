@@ -153,17 +153,25 @@ $mobile-content-width: 90%;
             height: auto;
         }
 
+        @include mq(tablet) {
+            &.right,
+            &.left {
+                width: 45%;
+            }
+        }
         @include mq(mobile) {
             margin: 1em auto;
             width: 80%;
             box-sizing: border-box;
 
             &.right,
-            &.left {
+            &.left,
+            &.center {
                 margin: 0 auto;
                 padding-right: 0;
                 padding-left: 0;
                 float: none;
+                width: 80%;
             }
         }
     }
@@ -268,7 +276,7 @@ $mobile-content-width: 90%;
     h3 {
         margin-left: 10%;
         font-size: 250%;
-        font-size: MIN(250%, 5vw);
+        font-size: MIN(250%, 4.5vw);
         font-family: "Noto Serif JP", serif;
         font-weight: bold;
         white-space: nowrap;
@@ -281,6 +289,7 @@ $mobile-content-width: 90%;
             margin-left: 5%;
         }
         @include mq(mobile) {
+            font-size: 5vw;
             margin-left: 8px;
             font-weight: 900;
         }
