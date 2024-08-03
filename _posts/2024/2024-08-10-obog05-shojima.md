@@ -21,16 +21,18 @@ Vol.5 64期 庄島 辰尭
 
 
 <div class="image-box left">
-<img src="/assets/images/topics/2024/shojima/ground1.jpg" alt="写真"><br/>
+<img src="/assets/images/topics/2024/shojima/ground1.jpg" alt="グラウンドでの写真"><br/>
 西高グラウンドで指導する64期の庄島さん　ラインだけでなく、あらゆるポジションのアドバイスができる<br/>
-<img src="/assets/images/topics/2024/shojima/ground2.jpg" alt="写真"><br/>
+</div>
+<div class="image-box right">
+<img src="/assets/images/topics/2024/shojima/ground2.jpg" alt="グラウンドでの写真"><br/>
 </div>
 
 
 ### アメフト引退しAIビジネス起業！
 
 <div class="image-box right">
-<img src="/assets/images/topics/2024/shojima/coaches.jpg" alt="コーチ陣"><br/>
+<img src="/assets/images/topics/2024/shojima/coaches.jpg" alt="コーチ陣写真"><br/>
 この日の西高アメフト指導陣。右から尾崎顧問、大町さん、庄島さん、森下さん
 </div>
 
@@ -67,10 +69,10 @@ AIの分野は爆発的な成長をしているので、技術的な変化をど
 質問）アメフトに長年携わってきましたが、庄島さんには、アメフトはどんなスポーツに見えていますか？
 
 <div class="image-box right">
-<img src="/assets/images/topics/2024/shojima/field-practice.jpg" alt="写真"><br/>
+<img src="/assets/images/topics/2024/shojima/field-practice.jpg" alt="練習風景写真"><br/>
 実践的練習でスキルを「インストールせよ」と選手に説く庄島さん<br/>
 <br/>
-<img src="/assets/images/topics/2024/shojima/field2.jpg" alt="写真"><br/>
+<img src="/assets/images/topics/2024/shojima/field2.jpg" alt="練習風景写真"><br/>
 優秀な戦績を残したコーチが手本を示せるのも現指導陣の魅力
 </div>
 
@@ -93,7 +95,7 @@ AIの分野は爆発的な成長をしているので、技術的な変化をど
 私も海外で様々な経験を積んできたからこそ、日本でビジネスを立ち上げ日本経済に貢献し、日本をよくしていきたいです。将来的にアメリカでしたいことも山ほどありますが、今はポテンシャルの高い日本を拠点に活動します。
 
 <div class="image-box center">
-<img src="/assets/images/topics/2024/shojima/nishi.jpg" alt="写真"><br/>
+<img src="/assets/images/topics/2024/shojima/nishi.jpg" alt="西高時代の写真"><br/>
 大きな体格から想像できない超高校級プレーを連発した高校時代（75番）。提供：都立西高校アメリカンフットボール部保護者
 </div>
 
@@ -106,7 +108,7 @@ AIの分野は爆発的な成長をしているので、技術的な変化をど
 西高には、人間面や学業面で優秀な人が沢山いたという話をしましたが、フットボールでも優秀な選手ばかりでした。秋の都大会は２位、関東大会はベスト4、最後は慶應義塾高校に負けてしまいましたが、本気で日本一を目指せる仲間でした。そんな優秀な西高で満足のゆく活躍ができなかったことが悔しくて闘争心に火がつき、二度とまわりの期待にこたえられない選手にはならないぞというモットーの下、アメリカンフットボール選手としての向上に燃えていました。西高での経験がなければUCLAへ行けるような選手には成長していなかったと思います。ロン毛で異端者の私を３年生から受け入れてくれた同期をはじめとする西高には感謝の気持ちしかありません。心から西高に行ってよかったと思っています。
 
 <div class="image-box right">
-<img src="/assets/images/topics/2024/shojima/last.jpg" alt="写真"><br/>
+<img src="/assets/images/topics/2024/shojima/last.jpg" alt="庄島さん写真"><br/>
 「コーチングは西高への感謝の気持ちを伝える手段のひとつ」と語る庄島さん
 </div>
 
