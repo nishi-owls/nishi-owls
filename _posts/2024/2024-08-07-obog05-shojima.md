@@ -100,7 +100,7 @@ AIの分野は爆発的な成長をしているので、技術的な変化をど
 </div>
 
 
-### 闘争心をかきたててくれた<br/>西高への恩返しを続けたい。
+### 闘争心をかきたててくれた<br/>西高への恩返しを続けたい
 
 <div class="image-box right">
 <img src="/assets/images/topics/2024/shojima/nishi2.jpg" alt="西高時代の写真"><br/>
