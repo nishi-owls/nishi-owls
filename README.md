@@ -7,8 +7,7 @@
 
 [Jekyllのチュートリアル](https://jekyllrb-ja.github.io/docs/step-by-step/01-setup/) のステップ1から10全てを実施するのを推奨します。
 
-尚、ステップ1の「インストール」でRubyをインストールする際は最新のver3.0ではなくver2.7をインストールしてください。(3.0だとサイトのビルド時にエラーが発生します。)
-rbenv使用時は `/.ruby-version` のversion指定が反映されますが、rbenvを使用しない環境では気を付けてください。
+尚、rbenv使用時は `/.ruby-version` のversion指定が反映されますが、rbenvを使用しない環境では気を付けてください。
 特にデフォルトではrbenvが使用できないWindowsでは要注意です。
 
 ## ローカル環境でサイトを実行する
@@ -23,9 +22,9 @@ rbenv使用時は `/.ruby-version` のversion指定が反映されますが、rb
 
 * Facebook logo (assets/images/facebook.png)
   - From https://ja.facebookbrand.com/facebookapp/
-* Twitter logo (assets/images/twitter.png)
-  - From https://about.twitter.com/en/who-we-are/brand-toolkit
+* X logo (assets/images/x-black.png, x-white.png)
+  - From https://about.x.com/en/who-we-are/brand-toolkit
 * Instagram logo (assets/images/instagram.png)
   - From https://en.facebookbrand.com/instagram/assets/instagram?audience=instagram-landing
-* Tocca.js libraryr （スワイプ検出用。軽量のため採用。）
+* Tocca.js （スワイプ検出用。軽量のため採用。）
   - From https://github.com/GianlucaGuarini/Tocca.js

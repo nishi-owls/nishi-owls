@@ -21,15 +21,9 @@ title: 試合結果
 <h2>過去の試合結果</h2>
 
 <ul>
-    {% comment %} TODO can we avoid N^2 computation easily? {% endcomment %}
-    {% for year in site.game_years reversed %}
-    {% assign num = 0 %}
-    {% for game in site.games %}
-    {% assign y = game.date | date : "%Y" | plus: 0 %}
-    {% if y == year.year %}{% assign num = num | plus: 1 %}{% endif %}
-    {% endfor %}
-    <li><a href="{{ year.url }}">{{ year.year }}年 ({{ num }})</a></li>
-    {% endfor %}
+{%- for archive in site.archives reversed -%}
+    <li><a href="{{ archive.url }}">{{ archive.date | date : "%Y" }}年 ({{ archive.posts | size }})</a></li>
+{%- endfor -%}
 </ul>
 
 <p>

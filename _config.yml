@@ -12,8 +12,10 @@ collections:
     output: true
     permalink: /game/:year/:name.html
   game_years:
+    output: false
+  messages:
     output: true
-    permalink: /game/:name/index.html
+    permalink: /message/individual/:name.html
   posts:
     permalink: /topics/:year/:month-:day-:title:output_ext
 
@@ -25,9 +27,9 @@ defaults:
       layout: "game"
   - scope:
       path: ""
-      type: "game_years"
+      type: "messages"
     values:
-      layout: "game_year"
+      layout: "message"
   - scope:
       path: ""
       type: "posts"
@@ -45,11 +47,24 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-paginate-v2
 
 kramdown:
   hard_wrap: true
 
+pagination:
+  enabled: true
+
+jekyll-archives:
+  collection: "games"
+  enabled: [year]
+  layouts:
+    year: game_year
+  permalinks:
+    year: '/game/:year/'
+
 exclude:
+  - _tools/
   - assets_data/
   - Gemfile
   - Gemfile.lock

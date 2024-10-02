@@ -1,15 +1,30 @@
 ---
-title: OWLS 卒業生探訪 〜あの期、あの人〜
+title: OWLS 卒業生探訪 〜あの期、あの人〜<br/>記事一覧
+pagination:
+  enabled: true
+  collection: posts
+  tag: visit-obog
+  per_page: 12
+  permalink: '/visit-obog-:num.html'
+  indexpage: 'visit-obog'
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
+  title: ':title (page :num / :max)'
 ---
 
 {% include breadcrumb.html list="/topics/, トピックス" %}
 
-<h1 id="bg4">OWLS 卒業生探訪 〜あの期、あの人〜<br />記事一覧</h1>
+<h1 id="bg4">{{ page.title }}</h1>
 
 <p>各界で活躍するOWLS卒業生へのインタビューを通じて、OWLSの魅力に迫ります。</p>
 
 <h2>記事一覧</h2>
 
-{% include topics_list.html posts=site.tags.visit-obog %}
+{% include topics_list.html posts=paginator.posts %}
+
+{% include paginator.html paginator=paginator %}
 
 <p><a href="index.html">トピックス一覧へ戻る</a></p>

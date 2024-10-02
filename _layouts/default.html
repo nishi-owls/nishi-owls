@@ -31,6 +31,8 @@
     {% capture title %}{{ page.date | date: "%-m月%-d日" }} {{ page.vs }}戦 | {{ site.title }}{% endcapture %}
     {% elsif page.collection == "game_years" %}
     {% capture title %}{{ page.year }}年の試合結果一覧 | {{ site.title }}{% endcapture %}
+    {% elsif page.collection == "messages" %}
+    {% capture title %}{{ page.title }} - {{ page.author }} | {{ site.title }}{% endcapture %}
     {% else %}
     {% assign purified_title = page.title | replace: '<br />', ' ' | replace: '<br/>', ' ' | replace: '<br>', ' ' %}
     {% capture title %}{{ purified_title }} | {{ site.title }}{% endcapture %}

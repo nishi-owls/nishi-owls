@@ -80,43 +80,29 @@
         }
     }
 
-    div.image-box {
+    img {
         float: right;
         margin-left: 10px;
         margin-right: 25px;
         width: 500px;
         max-width: 50%;
+        height: auto;
         box-sizing: border-box;
+        display: block;
 
         &.portrait {
-            width: 300px;
+            width: MIN(300px, 50%);
+
             @include mq(mobile) {
-                width: 100%;
-
-                img {
-                    width: 60%;
-                }
+                width: 60%;
             }
-        }
-
-        img {
-            width: 100%;
-            height: auto;
-        }
-
-        @include mq(tablet) {
-            margin-right: 8px; // same as p
         }
 
         @include mq(mobile) {
-            margin: 8px 0;
-            width: 100%;
+            float: none;
+            margin: 8px auto;
+            width: 80%;
             max-width: 100%;
-            text-align: center;
-
-            img {
-                width: 80%;
-            }
         }
     }
 
@@ -125,10 +111,97 @@
         color: #555555;
         font-size: 75%;
 
-        .profile-title {
+        &::first-line {
             font-weight: bold;
             color: black;
             font-size: 130%;
+        }
+    }
+}
+
+.ob-message-top-box {
+    .message-main {
+        height: 500px;
+        overflow: hidden;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            display: block;
+            content: "";
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 75px;
+            background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 1) 100%);
+        }
+    }
+
+    .readmore {
+        margin-bottom: 2.5em;
+
+        a {
+            display: block;
+            margin: 10px auto;
+            border-radius: 10px;
+            background: #a90329;
+            width: 200px;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+
+#main ul.message-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    li {
+        margin: 20px auto;
+        width: 45%;
+        list-style: none;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+        box-shadow: 3px 3px 3px silver;
+        box-sizing: border-box;
+        padding: 0;
+        border: 1px solid silver;
+        display: flex;
+
+        a {
+            display: block;
+            padding: 1.5em;
+            padding-right: 0;
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+            font-size: 125%;
+            background: linear-gradient(90deg,
+                    white 0%,
+                    white 70%,
+                    rgba(255, 255, 255, 0.3) 85%,
+                    rgba(255, 255, 255, 0.1) 100%);
+            flex-grow: 1;
+        }
+    }
+
+    @include mq(tablet) {
+        li {
+            width: 80%;
+
+            a {
+                padding: 1em 20px;
+            }
+        }
+    }
+
+    @include mq(mobile) {
+        li {
+            width: 90%;
         }
     }
 }

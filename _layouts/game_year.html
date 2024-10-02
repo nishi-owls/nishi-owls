@@ -4,21 +4,36 @@ layout: default
 
 {% include breadcrumb.html list="/game/, 試合結果" %}
 
-<h1 id="bg3">{{ page.year }}年の試合結果一覧</h1>
+{% assign: year = page.date | date: "%Y" %}
+<h1 id="bg3">{{ year }}年の試合結果一覧</h1>
 
-{{ content | markdownify }}
+{% assign year_page = site.game_years | where: 'year', year | first %}
+{% if year_page %}
+{{ year_page.content | markdownify }}
+{% endif %}
 
-{% include game_year_base.html year=page.year %}
+{% assign games_spring = page.posts | where: "season", "spring" | reverse %}
+{% assign games_fall = page.posts | where: "season", "fall" | reverse %}
+
+{% if games_fall.size > 0 %}
+<h2>秋季大会</h2>
+{% include games_list.html games=games_fall %}
+{% endif %}
+
+{% if games_spring.size > 0 %}
+<h2>春季大会</h2>
+{% include games_list.html games=games_spring %}
+{% endif %}
 
 <div class="game-navigation">
     {% if page.previous.url %}
     <a href="{{page.previous.url}}" class="prev">
-        &laquo; {{ page.previous.year }}年
+        &laquo; {{ page.previous.date | date: "%Y" }}年
     </a>
     {% endif %}
     {% if page.next.url %}
     <a href="{{page.next.url}}" class="next">
-        {{ page.next.year }}年 &raquo;
+        {{ page.next.date | date: "%Y" }}年 &raquo;
     </a>
     {% endif %}
 </div>

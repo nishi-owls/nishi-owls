@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+{% include breadcrumb.html list="/message/, メッセージ, /message/obog.html, 活躍中のOBより" %}
+
+<h1>{{ page.author }}<br />{{ page.title }}</h1>
+
+{% include message_item.html message=page %}
+
+<h2 style="clear:both">他のメッセージ</h2>
+
+{% assign messages = "" | split: "" %}
+{% for msg in site.messages %}
+{% unless page.url == msg.url %}
+{% assign messages = messages | push: msg %}
+{% endunless %}
+{% endfor %}
+
+{% include messages_list.html messages=messages %}
+
+<p style="clear:both"><a href="/message/obog.html">活躍中のOBからのメッセージ トップへ</a></p>

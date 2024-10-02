@@ -109,6 +109,72 @@ $mobile-content-width: 90%;
     @include mq(mobile) {
         width: $mobile-content-width;
     }
+
+    .image-box {
+        &.right {
+            float: right;
+            padding-left: 2em;
+            margin-right: 10%;
+            @include mq(tablet) {
+                margin-right: 5%;
+            }
+        }
+        &.left {
+            float: left;
+            padding-right: 2em;
+            margin-left: 10%;
+            @include mq(tablet) {
+                margin-left: 5%;
+            }
+        }
+        &.center {
+            width: 60%;
+            margin: auto auto;
+        }
+        &.w200 {
+            max-width: 200px;
+        }
+
+        width: 40%;
+        box-sizing: border-box;
+        padding-top: 1.25em;
+        padding-bottom: 1em;
+
+        font-size: 80%;
+        color: #555;
+
+        strong {
+            color: black;
+            font-size: 120%;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        @include mq(tablet) {
+            &.right,
+            &.left {
+                width: 45%;
+            }
+        }
+        @include mq(mobile) {
+            margin: 1em auto;
+            width: 80%;
+            box-sizing: border-box;
+
+            &.right,
+            &.left,
+            &.center {
+                margin: 0 auto;
+                padding-right: 0;
+                padding-left: 0;
+                float: none;
+                width: 80%;
+            }
+        }
+    }
 }
 
 .topics-navigation {
@@ -210,7 +276,7 @@ $mobile-content-width: 90%;
     h3 {
         margin-left: 10%;
         font-size: 250%;
-        font-size: MIN(250%, 5vw);
+        font-size: MIN(250%, 4.5vw);
         font-family: "Noto Serif JP", serif;
         font-weight: bold;
         white-space: nowrap;
@@ -223,6 +289,7 @@ $mobile-content-width: 90%;
             margin-left: 5%;
         }
         @include mq(mobile) {
+            font-size: 5vw;
             margin-left: 8px;
             font-weight: 900;
         }
@@ -230,60 +297,6 @@ $mobile-content-width: 90%;
 
     sup {
         font-size: 75%;
-    }
-
-    .image-box {
-        &.right {
-            float: right;
-            padding-left: 2em;
-            margin-right: 10%;
-            @include mq(tablet) {
-                margin-right: 5%;
-            }
-        }
-        &.left {
-            float: left;
-            padding-right: 2em;
-            margin-left: 10%;
-            @include mq(tablet) {
-                margin-left: 5%;
-            }
-        }
-        &.w200 {
-            max-width: 200px;
-        }
-
-        width: 40%;
-        box-sizing: border-box;
-        padding-top: 1.25em;
-        padding-bottom: 1em;
-
-        font-size: 80%;
-        color: #555;
-
-        strong {
-            color: black;
-            font-size: 120%;
-        }
-
-        img {
-            width: 100%;
-            height: auto;
-        }
-
-        @include mq(mobile) {
-            margin: 1em auto;
-            width: 80%;
-            box-sizing: border-box;
-
-            &.right,
-            &.left {
-                margin: 0 auto;
-                padding-right: 0;
-                padding-left: 0;
-                float: none;
-            }
-        }
     }
 
     .column {

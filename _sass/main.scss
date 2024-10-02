@@ -268,8 +268,8 @@ ruby {
     &#facebook-box {
       background-color: rgba(24, 119, 242, 1);
     }
-    &#twitter-box {
-      background-color: #1da1f2;
+    &#x-box {
+      background-color: #000000;
     }
     &#instagram-box {
       // From https://stackoverflow.com/a/37751377
@@ -433,6 +433,51 @@ ruby {
   }
 }
 
+#main .top-more-button {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto 3em;
+
+  a {
+    display: block;
+    position: relative;
+    border: 3px solid #c00000;
+    background: #c00000;
+    color: white;
+    padding: 5px 30px;
+    padding-left: 40px; // ▲印が入るため、左のほうが広いほうが自然
+    text-decoration: none;
+    font-size: 85%;
+    font-weight: bold;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin-top: auto;
+      margin-bottom: auto;
+      left: 20px;
+
+      border-style: solid;
+      border-color: transparent;
+      border-left-color: white;
+      border-width: 5px 10px;
+      width: 0;
+      height: 0;
+    }
+
+    &:hover {
+      background: white;
+      color: #c00000;
+
+      &:before {
+        border-left-color: #c00000;
+      }
+    }
+  }
+}
+
 #main .top-content-links {
   display: flex;
   flex-wrap: nowrap;
@@ -493,6 +538,57 @@ ruby {
   @include mq(mobile) {
     li {
       width: 90%;
+    }
+  }
+}
+
+#main ul.pager {
+  text-align: center;
+  list-style: none;
+
+  li {
+    display: inline;
+    padding: 0;
+    margin: 5px 0;
+    list-style: none;
+    text-align: center;
+
+    a:any-link {
+      display: inline-block;
+      padding: 8px 12px;
+      text-decoration: none;
+      line-height: 1.5em;
+
+      background: white;
+      color: #303030;
+      border: 1px solid silver;
+
+      &:hover {
+        background-color: rgb(212, 212, 212);
+      }
+
+      @include mq(mobile) {
+        padding: 8px;
+      }
+    }
+
+    &:first-child a {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+
+    &:last-child a {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+  }
+
+  .selected a:any-link {
+    background: #c00000;
+    color: white;
+
+    &:hover {
+      background-color: #c00000;
     }
   }
 }

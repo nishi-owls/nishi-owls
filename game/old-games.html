@@ -12,7 +12,11 @@ title: 過去の戦績
         <th>戦績</th>
     </tr>
     {% for row in site.data.old-games %}
-    {% assign gameyear = site.game_years | where: "year", row.year | first %}
+    {%- assign: gameyear = nil -%}
+    {%- for archive in site.archives -%}
+    {%- assign: archiveYear = archive.date | date: "%Y" -%}
+    {%- if archiveYear == row.year %}{% assign: gameyear = archive %}{% endif -%}
+    {% endfor %}
     <tr>
         <td class='col-year'>
             {% if gameyear %}<a href='{{gameyear.url}}'>{% endif %}

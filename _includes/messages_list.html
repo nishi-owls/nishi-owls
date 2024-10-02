@@ -1,0 +1,6 @@
+<ul class="message-links">
+    {% for item in include.messages %}
+    <li style="background-image: url('{{ item.social_image }}')"><a href="{{ item.url }}">{{ item.author }}<br />{{
+            item.title }}</a></li>
+    {% endfor %}
+</ul>

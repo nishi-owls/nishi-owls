@@ -190,7 +190,10 @@
                 &:after {
                     content: "";
                     position: absolute;
-                    top: 8px;
+                    top: 0;
+                    bottom: 0;
+                    margin-top: auto;
+                    margin-bottom: auto;
                     right: 6px;
                     border-style: solid;
                     border-color: transparent;
@@ -349,5 +352,24 @@ table.team-member-table {
         &:hover {
             background-color: #f3f3f3;
         }
+    }
+}
+
+.team-safety-body {
+    width: 90%;
+    margin: 0 auto;
+
+    p {
+        margin: 1.5em 0;
+    }
+
+    img {
+        max-width: 50%;
+        @include mq(mobile) {
+            max-width: 100%;
+        }
+        height: auto;
+        margin: 1em auto;
+        display: block;
     }
 }
