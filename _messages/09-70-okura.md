@@ -18,7 +18,7 @@ social_image: /assets/images/message/70-okura5.jpg
 2015年～2017年、都立西高。2017年、春季関東大会4位入賞。2017年 春季ハドルマガジン スーパースターハイスクール選出。
 2019年～2022年、早稲田大学。
 2024年〜、ノジマ相模原ライズ。（2024年現在）
-[2021年のメッセージはこちら](./02-70-okura)
+[2021年のメッセージはこちら](/message/individual/02-70-okura)
 {: .profile}
 
 Photograph by Kohei SAEKI ©Official RISE pics
