@@ -2,7 +2,7 @@
 tags: news
 title: アメフト部の大学現役合格にむけて - OWLS OBが語る文武二道の秘訣
 image: 2025/bunbunido.jpg
-social_image: /assets/images/topics/2025/bunbunido.jpg
+social_image: /assets/images/topics/2025/bunbunido-large.jpg
 ---
 
 <style>
@@ -78,7 +78,7 @@ OWLSでは先日、 "アメフト部現役合格にむけて" と題した特別
 
 また、OWLSが「アメフト部兼勉強サークル」のようなアメフトも勉強も真剣に取り組む集団となることで、部活動に対する保護者の理解を深め、不安を軽減することもできると思います。そして、この取り組みが西高全体、ひいては他校の部活動にも良い影響を与え、その先駆けとしてOWLSが認知されるようになることが私の野望です。
 
-![](/assets/images/topics/2025/bunbunido.jpg)
+![](/assets/images/topics/2025/bunbunido-large.jpg)
 {: .image-box .center}
 
 ## まとめに
