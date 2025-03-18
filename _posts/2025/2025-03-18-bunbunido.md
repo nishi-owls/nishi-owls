@@ -1,8 +1,8 @@
 ---
 tags: news
 title: アメフト部の大学現役合格にむけて - OWLS OBが語る文武二道の秘訣
-image: 2025/bunbunido.jpg
-social_image: /assets/images/topics/2025/bunbunido-large.jpg
+image: 2025/03-18-bunbunido.jpg
+social_image: /assets/images/topics/2025/03-18-bunbunido-large.jpg
 ---
 
 <style>
@@ -38,7 +38,7 @@ OWLSでは先日、 "アメフト部現役合格にむけて" と題した特別
 
 ### ― 今回の企画を立案された背景について教えてください。
 
-![](/assets/images/topics/2025/tara.jpg)
+![](/assets/images/topics/2025/03-18-tara.jpg)
 渡邊太良さん。OWLS 69期の副将を務めた。
 {: .image-box .right}
 
@@ -56,7 +56,7 @@ OWLSでは先日、 "アメフト部現役合格にむけて" と題した特別
 
 また、そのうち4名のOBには実際に現役の練習後に集まっていただき、現役部員に向けて直接メッセージを語ってもらいました。
 
-![](/assets/images/topics/2025/bunbunido-leaflet.png)
+![](/assets/images/topics/2025/03-18-bunbunido-leaflet.png)
 冊子の一部。左は為我井さんからの一部、右は若林さんの一部。
 {: .image-box .center}
 
@@ -78,7 +78,7 @@ OWLSでは先日、 "アメフト部現役合格にむけて" と題した特別
 
 また、OWLSが「アメフト部兼勉強サークル」のような、スポーツだけでなく勉強も真剣に取り組む部活動としてモデルケースとなることで、部活動に対する保護者の理解を深め、不安を軽減することもできると思います。そして、この部活動のあり方が西高全体、ひいては他校の部活動にも広がり、その先駆けとしてOWLSが認知されるようになることが私の野望です。
 
-![](/assets/images/topics/2025/bunbunido-large.jpg)
+![](/assets/images/topics/2025/03-18-bunbunido-large.jpg)
 {: .image-box .center}
 
 ## まとめに
