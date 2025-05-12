@@ -74,3 +74,7 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+
+special_subtitle:
+  text: "&#x1f338;祝80期入学&#x1f338;"
+  link: "/message/"
