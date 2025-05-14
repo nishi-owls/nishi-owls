@@ -29,8 +29,8 @@
     {% assign title = site.title %}
     {% elsif page.collection == "games" %}
     {% capture title %}{{ page.date | date: "%-m月%-d日" }} {{ page.vs }}戦 | {{ site.title }}{% endcapture %}
-    {% elsif page.collection == "game_years" %}
-    {% capture title %}{{ page.year }}年の試合結果一覧 | {{ site.title }}{% endcapture %}
+    {% elsif page.layout == "game_year" %}
+    {% capture title %}{{ page.date | date: "%Y"  }}年の試合結果一覧 | {{ site.title }}{% endcapture %}
     {% elsif page.collection == "messages" %}
     {% capture title %}{{ page.title }} - {{ page.author }} | {{ site.title }}{% endcapture %}
     {% else %}
