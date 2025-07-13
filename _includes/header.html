@@ -3,10 +3,10 @@
     <div class="titles">
         <div class="title1">
             <a href="/">OWLS</a>{%-
-            if site.special_subtitle or jekyll.environment != "production"
+            if site.featured_topic.enabled or jekyll.environment != "production"
             -%}<span class="special-subtitle">
-                    {%- if site.special_subtitle.text -%}
-                    <a href="{{ site.special_subtitle.link }}">{{ site.special_subtitle.text }}</a>
+                    {%- if site.featured_topic.subheading.text -%}
+                    <a href="{{ site.featured_topic.subheading.link }}">{{ site.featured_topic.subheading.text }}</a>
                     {%- endif -%}
                     {%- if jekyll.environment != "production" %}[DEV]{% endif -%}
                 </span>
