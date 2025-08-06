@@ -1,6 +1,6 @@
 ---
 tags: visit-obog
-title: 卒業生探訪 - 58期 富岡 義仁<br/>「チームドクターの“仁義”―医の三刀流で貫く“矜持”」
+title: 卒業生探訪 - 58期 富岡 義仁<br/>「チームドクターの“仁義”<br/>　― 医の三刀流で貫く“矜持” ―」
 image: 2025/tomioka/main.jpg
 social_description: チームドクターを務める富岡義仁氏（58期）に話を伺った。日本人で初めて医師×アスレティックトレーナー×IOCドクターの3資格を保有し、東京オリンピックでは最年少で選手村ドクターも務めた。常にフィールドで選手に向き合い続ける富岡氏にとっての“矜持と覚悟”を紐解いていく。
 social_image: /assets/images/topics/2025/tomioka/main.jpg
@@ -13,7 +13,9 @@ Vol.7 58期 富岡 義仁
 </div>
 <div class="topic-title">
 チームドクターの“仁義”<br/>
+<div class="topic-subtitle">
 ―医の三刀流で貫く“矜持”
+</div>
 </div>
 </div>
 
