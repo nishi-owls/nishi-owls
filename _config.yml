@@ -48,6 +48,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-paginate-v2
+  - jekyll-redirect-from
 
 kramdown:
   hard_wrap: true
