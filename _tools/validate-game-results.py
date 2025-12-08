@@ -10,6 +10,7 @@ This script checks that the 'result' field in game files matches the actual scor
 Also checks for:
 - Field name typos (e.g., 'out_scores' instead of 'our_scores')
 - Missing required fields (result, our_score, vs_score)
+- Score sum validation: sum(our_scores) == our_score and sum(vs_scores) == vs_score
 
 Usage:
     python3 _tools/validate-game-results.py
@@ -63,6 +64,21 @@ def validate_game_file(file_path):
     issues = []
     if 'out_scores' in frontmatter:
         issues.append("Found 'out_scores' (should be 'our_scores')")
+
+    # Validate score sums
+    our_scores = frontmatter.get('our_scores', [])
+    vs_scores = frontmatter.get('vs_scores', [])
+
+    # Calculate sum of scores (excluding non-numeric values like '○' for tiebreakers)
+    if our_scores:
+        our_scores_sum = sum(s for s in our_scores if isinstance(s, (int, float)))
+        if our_scores_sum != our_score:
+            issues.append(f"Score sum mismatch: sum(our_scores) = {our_scores_sum} but our_score = {our_score}")
+
+    if vs_scores:
+        vs_scores_sum = sum(s for s in vs_scores if isinstance(s, (int, float)))
+        if vs_scores_sum != vs_score:
+            issues.append(f"Score sum mismatch: sum(vs_scores) = {vs_scores_sum} but vs_score = {vs_score}")
 
     # Validate result against scores - only catch contradictions
     # result='win' but our_score < vs_score => ERROR
