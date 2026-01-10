@@ -303,6 +303,14 @@ $mobile-content-width: 90%;
         font-size: 75%;
     }
 
+    p.offtopic {
+        background: #eee;
+        border-left: 10px solid silver;
+        font-size: 85%;
+        padding: 5px 10px;
+        box-sizing: border-box;
+    }
+
     .column {
         width: 70%;
         margin: 3em auto;
