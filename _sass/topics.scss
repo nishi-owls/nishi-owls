@@ -153,6 +153,10 @@ $mobile-content-width: 90%;
             height: auto;
         }
 
+        &.small img {
+            width: 80%;
+        }
+
         @include mq(tablet) {
             &.right,
             &.left {
