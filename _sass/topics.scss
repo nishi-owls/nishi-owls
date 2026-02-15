@@ -153,6 +153,10 @@ $mobile-content-width: 90%;
             height: auto;
         }
 
+        &.small img {
+            width: 80%;
+        }
+
         @include mq(tablet) {
             &.right,
             &.left {
@@ -301,6 +305,14 @@ $mobile-content-width: 90%;
 
     sup {
         font-size: 75%;
+    }
+
+    p.offtopic {
+        background: #eee;
+        border-left: 10px solid silver;
+        font-size: 85%;
+        padding: 5px 10px;
+        box-sizing: border-box;
     }
 
     .column {
