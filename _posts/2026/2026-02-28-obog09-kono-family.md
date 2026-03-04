@@ -1,6 +1,6 @@
 ---
 tags: visit-obog
-title: 卒業生探訪 - 39期 功能 拓郎×74期 功能 誠也<br/>「一瞬を“作品”にするために<br/>―父と子をつないだ“宝物”―」
+title: 卒業生探訪 - 39期 功能 拓郎×74期 功能 誠也<br/>「一瞬を“作品”にするために<br/>― 父と子をつないだ“宝物” ―」
 image: 2026/kono-family/main.jpg
 social_description: 功能 拓郎氏（39期）と誠也氏（74期）父子に話を伺った。父が見せた景色、子が選んだ道、そして二人の想いをつないだ“宝物”を手がかりに、世代を超えて受け継がれるOWLSの伝統を紐解いていく。
 social_image: /assets/images/topics/2026/kono-family/main.jpg
@@ -15,7 +15,7 @@ Vol.9 親子対談 39期 功能 拓郎×74期 功能 誠也
 <div class="topic-title">
 一瞬を“作品”にするために<br/>
 <div class="topic-subtitle">
-―父と子をつないだ“宝物”―
+― 父と子をつないだ“宝物” ―
 </div>
 </div>
 </div>
