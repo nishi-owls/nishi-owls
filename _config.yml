@@ -77,10 +77,10 @@ exclude:
   - vendor/ruby/
 
 featured_topic:
-  enabled: false
-  # subheading:
-  #   text: "&#x1F3C6;祝関東大会出場"
-  #   link: "/topics/2025/05-11-buzan.html"
-  # slide:
-  #   image: "kanto.jpg"
-  #   link: "/topics/2025/05-11-buzan.html"
+  enabled: true
+  subheading:
+    text: "&#x1f338;祝81期入学&#x1f338;"
+    link: "/message/"
+  slide:
+    image: "welcome81.jpg"
+    link: "/message/"
