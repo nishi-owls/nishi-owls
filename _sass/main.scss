@@ -591,4 +591,11 @@ ruby {
       background-color: #c00000;
     }
   }
+
+  .ellipsis {
+    display: inline-block;
+    padding: 8px 6px;
+    line-height: 1.5em;
+    color: #303030;
+  }
 }
