@@ -17,6 +17,8 @@ pagination:
 
 <h1 id="bg4">{{ page.title }}</h1>
 
+{% include topics_tag_select.html %}
+
 <h2>記事一覧</h2>
 
 {% include topics_list.html posts=paginator.posts %}
