@@ -1,0 +1,14 @@
+{% assign _url = page.url %}
+{% assign _on_tag_page = false %}
+{% for tag in site.data.topics-tags %}
+  {% if _url contains tag[0] %}{% assign _on_tag_page = true %}{% endif %}
+{% endfor %}
+
+<div id="topics-tag-select">
+  カテゴリー ： <select onchange="location.href=this.value">
+    <option value="/topics/"{% unless _on_tag_page %} selected{% endunless %}>すべての記事</option>
+    {% for tag in site.data.topics-tags %}
+    <option value="/topics/{{ tag[1].page }}"{% if _url contains tag[0] %} selected{% endif %}>{{ tag[1].name }}</option>
+    {% endfor %}
+  </select>
+</div>

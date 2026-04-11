@@ -63,6 +63,18 @@ $mobile-content-width: 90%;
     }
 }
 
+#topics-tag-select {
+    margin: 1em 0;
+
+    @include mq(tablet) {
+        padding: 0 8px;
+    }
+
+    select {
+        padding: 5px;
+    }
+}
+
 .topics-content-header {
     width: $desktop-content-width;
     margin: 1em auto 1.5em;
