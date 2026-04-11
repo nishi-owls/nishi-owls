@@ -7,11 +7,22 @@
         {% endif %}
 
         {% if paginator.page_trail %}
+            {% assign first_trail = paginator.page_trail | first %}
+            {% assign last_trail = paginator.page_trail | last %}
+
+            {% if first_trail.num > 1 %}
+                <li class="ellipsis">...</li>
+            {% endif %}
+
             {% for trail in paginator.page_trail %}
                 <li {% if page.url == trail.path %}class="selected"{% endif %}>
                     <a href="{{ trail.path | prepend: site.baseurl | replace: '//', '/' }}" title="{{trail.title}}">{{ trail.num }}</a>
                 </li>
             {% endfor %}
+
+            {% if last_trail.num < paginator.total_pages %}
+                <li class="ellipsis">...</li>
+            {% endif %}
         {% endif %}
 
         {% if paginator.next_page %}
