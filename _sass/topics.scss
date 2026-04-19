@@ -264,7 +264,7 @@ $mobile-content-width: 90%;
 
         .topic-title {
             font-size: 300%;
-            font-size: MIN(300%, 7vw);
+            font-size: MIN(300%, 6.25vw); // 100/16 = 6.26. To ensure 16 chars
             margin-top: 1em;
             margin-bottom: 2em;
             font-family: "Noto Serif JP", serif;
