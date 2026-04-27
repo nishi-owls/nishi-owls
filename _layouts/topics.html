@@ -2,7 +2,13 @@
 layout: default
 ---
 
-{% include breadcrumb.html list="/topics/, トピックス" %}
+{% assign first_tag = page.tags | first %}
+{% if first_tag and site.data.topics-tags[first_tag] %}
+{% capture bc_list %}/topics/, トピックス, /topics/{{ site.data.topics-tags[first_tag].page }}, {{ site.data.topics-tags[first_tag].name }}{% endcapture %}
+{% else %}
+{% assign bc_list = "/topics/, トピックス" %}
+{% endif %}
+{% include breadcrumb.html list=bc_list %}
 
 <h1 id="bg4">{{ page.title }}</h1>
 
