@@ -69,7 +69,7 @@ layout: default
 {% endfor %}
 {% if related.size > 0 and site.data.topics-tags[tag] %}
 <section class="related-posts">
-    <h2 class="related-posts-title">{{ site.data.topics-tags[tag].name }}の最近の記事</h2>
+    <h2>{{ site.data.topics-tags[tag].name }}の最近の記事</h2>
     {% include topics_list.html posts=related %}
 </section>
 {% endif %}
