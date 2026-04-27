@@ -53,4 +53,22 @@ layout: default
 
 {% endfor %}
 
-<p><a href="/topics/">トピックス記事一覧へ</a></p>
+{% for tag in page.tags %}
+{% assign related = "" | split: "" %}
+{% for post in site.posts %}
+{% if post.tags contains tag and post.url != page.url %}
+{% assign related = related | push: post %}
+{% if related.size >= 6 %}{% break %}{% endif %}
+{% endif %}
+{% endfor %}
+{% if related.size > 0 and site.data.topics-tags[tag] %}
+<section class="related-posts">
+    <h2 class="related-posts-title">{{ site.data.topics-tags[tag].name }}の最近の記事</h2>
+    {% include topics_list.html posts=related %}
+</section>
+{% endif %}
+{% endfor %}
+
+{% for tag in page.tags %}{% if site.data.topics-tags[tag] %}
+<p><a href="/topics/{{ site.data.topics-tags[tag].page }}">{{ site.data.topics-tags[tag].name }}の記事一覧へ</a></p>
+{% endif %}{% endfor %}
