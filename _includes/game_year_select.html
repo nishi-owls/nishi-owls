@@ -1,0 +1,24 @@
+{% assign _current_year = page.date | date: "%Y" %}
+
+<div id="game-year-select">
+  <select id="game-year-select-input">
+    {%- for archive in site.archives reversed -%}
+    {%- assign _archive_year = archive.date | date: "%Y" %}
+    <option value="{{ archive.url }}"{% if _archive_year == _current_year %} selected{% endif %}>{{ _archive_year }}年</option>
+    {%- endfor %}
+  </select>
+</div>
+<script>
+(function() {
+  var urls = [
+    {% for archive in site.archives reversed %}'{{ archive.url }}',
+    {% endfor %}
+  ];
+  document.getElementById('game-year-select-input').addEventListener('change', function() {
+    var idx = this.selectedIndex;
+    if (idx >= 0 && idx < urls.length) {
+      location.href = urls[idx];
+    }
+  });
+})();
+</script>
