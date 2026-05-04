@@ -15,14 +15,14 @@ layout: default
 {% assign games_spring = page.posts | where: "season", "spring" | reverse %}
 {% assign games_fall = page.posts | where: "season", "fall" | reverse %}
 
-{% if games_fall.size > 0 %}
-<h2>秋季大会</h2>
-{% include games_list.html games=games_fall %}
-{% endif %}
-
 {% if games_spring.size > 0 %}
 <h2>春季大会</h2>
 {% include games_list.html games=games_spring %}
+{% endif %}
+
+{% if games_fall.size > 0 %}
+<h2>秋季大会</h2>
+{% include games_list.html games=games_fall %}
 {% endif %}
 
 <div class="game-navigation">
