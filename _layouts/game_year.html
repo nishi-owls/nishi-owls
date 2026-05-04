@@ -7,6 +7,8 @@ layout: default
 {% assign: year = page.date | date: "%Y" %}
 <h1 id="bg3">{{ year }}年の試合結果一覧</h1>
 
+{% include game_year_select.html %}
+
 {% assign year_page = site.game_years | where: 'year', year | first %}
 {% if year_page %}
 {{ year_page.content | markdownify }}
