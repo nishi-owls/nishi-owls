@@ -27,3 +27,7 @@ text_rules:
   - expected: 佼成学園総合グラウンド
     patterns:
       - 佼成学園グラウンド
+
+  - expected: 日大鶴ヶ丘グラウンド
+    patterns:
+      - 日大鶴ヶ丘高校グラウンド
