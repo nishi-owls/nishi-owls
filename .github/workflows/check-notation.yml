@@ -1,0 +1,56 @@
+name: Check Notation Consistency
+
+on:
+  pull_request:
+    paths:
+      - '_posts/**'
+      - '_games/**'
+      - '_data/**'
+      - '.github/workflows/check-notation.yml'
+      - '_tools/check-notation.py'
+      - '_tools/notation-rules.yml'
+      - '_tools/check-names.py'
+      - '_tools/known-names.yml'
+      - '_tools/requirements.txt'
+
+  push:
+    branches: ["main"]
+    paths:
+      - '_posts/**'
+      - '_games/**'
+      - '_data/**'
+      - '.github/workflows/check-notation.yml'
+      - '_tools/check-notation.py'
+      - '_tools/notation-rules.yml'
+      - '_tools/check-names.py'
+      - '_tools/known-names.yml'
+      - '_tools/requirements.txt'
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+          cache: 'pip'
+          cache-dependency-path: '_tools/requirements.txt'
+
+      - name: Install dependencies
+        run: pip install -r _tools/requirements.txt
+
+      - name: Run notation check
+        run: python3 _tools/check-notation.py
+
+      - name: Run name/venue check
+        run: python3 _tools/check-names.py
