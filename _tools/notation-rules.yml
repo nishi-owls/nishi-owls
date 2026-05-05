@@ -1,0 +1,29 @@
+# text_rules: check Japanese text across all content files
+# Each rule: expected (correct form), patterns (incorrect forms to flag)
+text_rules:
+  - expected: 駒沢第二球技場
+    patterns:
+      - 駒沢第二球場
+      - 駒沢第二競技場
+      - 駒沢第2球場
+      - 駒沢第2球技場
+      - 駒沢第2競技場
+
+  - expected: 鶴ヶ丘
+    patterns:
+      - 鶴ケ丘
+
+  - expected: 中大附属
+    patterns:
+      - 中大付属
+  - expected: 中央大学附属
+    patterns:
+      - 中央大学付属
+
+  - expected: 慶應
+    patterns:
+      - 慶応
+
+  - expected: 佼成学園総合グラウンド
+    patterns:
+      - 佼成学園グラウンド
