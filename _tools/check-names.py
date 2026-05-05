@@ -8,6 +8,9 @@ For each game file in _games/, verifies that:
   - filename contains one of the known slugs for that vs
   - place    is a known venue
 
+Also checks _data/next-games.yml for valid vs and place values.
+Placeholder values (未定, 場所未定, (opponent TBD), etc.) are skipped.
+
 Rules are defined in _tools/known-names.yml.
 When adding a new opponent or venue, update that file in the same commit.
 
