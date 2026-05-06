@@ -67,8 +67,10 @@ jekyll-archives:
 exclude:
   - _tools/
   - assets_data/
+  - CLAUDE.md
   - Gemfile
   - Gemfile.lock
+  - netlify.toml
   - node_modules
   - README.md
   - vendor/bundle/
