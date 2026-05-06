@@ -1,29 +1,33 @@
 name: Validate Game Results
 
 on:
-  # Run on pull requests that modify game files or the workflow itself
   pull_request:
     paths:
       - '_games/**'
       - '.github/workflows/validate-games.yml'
       - '_tools/validate-game-results.py'
+      - '_tools/requirements.txt'
 
-  # Run on pushes to main that modify game files or the workflow itself
   push:
     branches: ["main"]
     paths:
       - '_games/**'
       - '.github/workflows/validate-games.yml'
       - '_tools/validate-game-results.py'
+      - '_tools/requirements.txt'
 
-  # Allow manual trigger
   workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+permissions:
+  contents: read
 
 jobs:
   validate:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
 
     steps:
       - name: Checkout repository
@@ -33,15 +37,11 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
+          cache: 'pip'
+          cache-dependency-path: '_tools/requirements.txt'
 
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install pyyaml
+        run: pip install -r _tools/requirements.txt
 
       - name: Run validation script
         run: python3 _tools/validate-game-results.py
-
-      - name: Validation passed
-        if: success()
-        run: echo "✓ All game files passed validation!"
