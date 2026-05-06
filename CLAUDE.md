@@ -1,13 +1,10 @@
-# CLAUDE.md - Project Guide for AI Assistants
-
-## Project Overview
+# Overview
 
 Official website for Tokyo Metropolitan Nishi High School American Football Team "OWLS" (都立西高アメリカンフットボール部 OWLS).
 
-**Website URL**: https://www.nishi-owls.com
-**Deployment**: GitHub Pages (primary, nishi-owls.com) / Netlify (secondary, preview)
+**URL**: https://www.nishi-owls.com — GitHub Pages (primary) / Netlify (secondary, preview)
 
-## Project Structure
+# Structure
 
 ```
 /
@@ -28,16 +25,16 @@ Official website for Tokyo Metropolitan Nishi High School American Football Team
 └── _tools/               # Custom Python tools for data processing
 ```
 
-### Jekyll Collections
+## Collections
 
 | Collection | Directory | URL pattern |
 |---|---|---|
 | games | `_games/` | `/game/:year/:name.html` |
-| game_years | `_game_years/` | year archive pages via custom archives plugin |
+| game_years | `_game_years/` | `/game/:year/` |
 | messages | `_messages/` | `/message/individual/:name.html` |
 | posts | `_posts/` | `/topics/:year/:month-:day-:title.html` |
 
-### Data Files (`_data/`)
+## Data Files
 
 - `member.csv` / `staff.csv`: Current roster and coaching staff
 - `old-games.csv`: Historical game records
@@ -46,7 +43,7 @@ Official website for Tokyo Metropolitan Nishi High School American Football Team
 - `topics-tags.yml`: Topic category definitions
 - `link.yml`: External links (school, football organizations, university teams)
 
-## Development
+# Development
 
 ```sh
 bundle install
@@ -56,13 +53,13 @@ bundle exec jekyll serve --drafts  # include draft posts
 
 Deployment is automatic on push to `main`: GitHub Pages (primary, serves nishi-owls.com) and Netlify (secondary, previews commits and branches including drafts/future posts).
 
-### Content Files
+## Content Files
 
 - Game results: `_games/YYYY/YYYY-MM-DD-opponent.html`
 - News articles: `_posts/YYYY/YYYY-MM-DD-title.md`
 - When adding a new opponent or venue, update `_tools/known-names.yml` in the same commit
 
-## CI/CD Validation (GitHub Actions)
+# CI/CD
 
 Two workflows run automatically on PR and push to `main`:
 
@@ -72,7 +69,7 @@ Two workflows run automatically on PR and push to `main`:
 **`check-notation.yml`** — triggered when `_posts/**`, `_games/**`, or `_data/**` files change
 - Checks notation consistency (表記ゆれ) and validates opponent/venue names
 
-## Custom Tools (`_tools/`)
+# Tools
 
 Install dependencies: `pip install -r _tools/requirements.txt`
 
@@ -81,7 +78,7 @@ Install dependencies: `pip install -r _tools/requirements.txt`
 - **`validate-game-results.py`**: Validates `result` field, required fields, and quarter score sums
 - **`parse-results-table/main.py`**: Converts text-based possession tables to Markdown (`python3 _tools/parse-results-table/main.py < input.txt`)
 
-## Custom Plugins (`_plugins/`)
+# Plugins
 
 **`file_date.rb`** — Liquid filter returning the Git commit date for a file (falls back to mtime):
 ```liquid
@@ -91,7 +88,7 @@ Install dependencies: `pip install -r _tools/requirements.txt`
 
 **`archives/jekyll-archives.rb`** — Generates year-level game archive pages from `_game_years/`.
 
-## Rules for AI Agents
+# Rules
 
 - **After editing articles or game results**, always run the validation tools locally before finishing:
   ```sh
@@ -105,8 +102,8 @@ Install dependencies: `pip install -r _tools/requirements.txt`
     - /old/path/to/page.html
   ```
 
-## Configuration Notes
+# Configuration
 
 - `site.featured_topic` in `_config.yml`: controls homepage featured announcement
 - `_tools/` and `assets_data/` are excluded from the Jekyll build
-- Timezone: Asia/Tokyo; language: `ja_JP`; strict Liquid filters enabled
+- Timezone: Asia/Tokyo; strict Liquid filters enabled
