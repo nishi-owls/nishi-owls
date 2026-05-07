@@ -18,7 +18,7 @@
       url: http://www.kansaikoukou-football.com/
     - name: 東京都高等学校体育連盟アメリカンフットボール専門部
       url: https://tokyo-americanfootball.com/
-    - name: 日本社会人アメリカンフットボールアメリカンフットボールXリーグ
+    - name: 日本社会人アメリカンフットボールXリーグ
       url: https://xleague.jp/
 - title: 主な東日本大学チーム
   items:
@@ -26,8 +26,8 @@
       url: https://www.hoseiorange.jp/football
     - name: 早稲田大学
       url: http://bigbears.org/
-    - name: 中央大学
-      url: http://cu-raccoons.com/
+    # - name: 中央大学
+    #   url: http://cu-raccoons.com/  # ドメインが第三者に乗っ取られているため一時コメントアウト
     - name: 明治大学
       url: https://www.meiji-griffins.net/
     - name: 桜美林大学
@@ -45,7 +45,7 @@
     - name: 国士舘大学
       url: https://www.k-rhinoceros.com/
     - name: 青山学院大学
-      url: https://agf-lightning.com/
+      url: https://agu-lightning.com/
     - name: 駒澤大学
       url: https://ku-bluetide.com/
     - name: 日本体育大学
@@ -59,10 +59,10 @@
     - name: 上智大学
       url: https://sophia-goldeneagles.com/
     - name: 筑波大学
-      url: http://tsa.tsukuba.ac.jp/football/
+      url: https://www.tsukubaowls.com/team/football
     - name: 一橋大学
       url: https://crimsonfootball.jp/
-    - name: 東京工業大学
+    - name: 東京科学大学
       url: https://titech-buffaloes.com/
     - name: 北海道大学
       url: https://biggreen-hu.jimdofree.com/
@@ -107,8 +107,8 @@
           url: http://www.finies.com/
         - name: オール三菱ライオンズ
           url: http://lions.vc/
-        - name: アサヒビールシルバースター
-          url: https://www.asahibeer.co.jp/silver/
+        - name: オリエンタルバイオシルバースター
+          url: https://silverstar-football.com/
         - name: アサヒ飲料クラブチャレンジャーズ
           url: https://challengers-net.com/
         - name: 福岡SUNS
@@ -144,11 +144,11 @@
       url: http://www.mghs-hepburns.net/
     - name: ​早稲田大学高等学院
       url: https://www.waseda-bears.com/
+    - name: 戸山高校
+      url: https://toyamagh.com/
     - name: 法政大学第二高等学校
       url: https://www.hosei2football.com/
     - name: 横浜高校
       url: http://www2.yokohama-jsh.ac.jp/mmt/amefuto/index2.htm
-    - name: 立教新座高校
-      url: https://www.localgymsandfitness.com/JP/Niiza-shi/127963767304498/%E7%AB%8B%E6%95%99%E6%96%B0%E5%BA%A7%E9%AB%98%E7%AD%89%E5%AD%A6%E6%A0%A1%E3%82%A2%E3%83%A1%E3%83%AA%E3%82%AB%E3%83%B3%E3%83%95%E3%83%83%E3%83%88%E3%83%9C%E3%83%BC%E3%83%AB%E9%83%A8
     - name: 花咲徳栄高校
       url: https://tokuharu-daffodils.amebaownd.com/
