@@ -132,5 +132,4 @@ Human inputs: detailed play-by-play report text.
 
 # Configuration
 
-- `site.featured_topic` in `_config.yml`: controls homepage featured announcement
 - Timezone: Asia/Tokyo; strict Liquid filters enabled

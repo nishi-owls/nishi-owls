@@ -5,16 +5,16 @@ social_description: "都立西高アメフト部OWLS公式HP。都立西高の�
 <script src="/assets/js/slide.js"></script>
 <div id="slideGalley">
     <ul class="slide">
-        {% if site.featured_topic.enabled and site.featured_topic.slide.image %}
-        {% capture img_content %}<img src="/assets/images/{{ site.featured_topic.slide.image }}" alt="">{% endcapture %}
-        {% if site.featured_topic.slide.link %}
-        <li><a href="{{ site.featured_topic.slide.link }}">{{ img_content }}</a></li>
+        {% if site.data.featured_topic.enabled and site.data.featured_topic.slide.image %}
+        {% capture img_content %}<img src="/assets/images/{{ site.data.featured_topic.slide.image }}" alt="">{% endcapture %}
+        {% if site.data.featured_topic.slide.link %}
+        <li><a href="{{ site.data.featured_topic.slide.link }}">{{ img_content }}</a></li>
         {% else %}
         <li>{{ img_content }}</li>
         {% endif %}
         {% endif %}
         {% for item in site.data.slide %}
-        {% unless item.url == site.featured_topic.slide.image %}
+        {% unless item.url == site.data.featured_topic.slide.image %}
         {% capture img_content %}<img src="/assets/images/{{ item.url }}" alt="">{% endcapture %}
         {% if item.link %}
         <li><a href="{{ item.link }}">{{ img_content }}</a></li>
