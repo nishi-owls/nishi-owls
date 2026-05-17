@@ -2,14 +2,15 @@
     <a href="/"><img src="/assets/images/logo.png" alt="OWLS" id="owls-logo"></a>
     <div class="titles">
         <div class="title1">
+            {%- assign ft = site.data.featured_topic -%}
             <a href="/">OWLS</a>{%-
-            if site.data.featured_topic.enabled or jekyll.environment != "production"
+            if ft.enabled or jekyll.environment != "production"
             -%}<span class="special-subtitle">
-                    {%- if site.data.featured_topic.subheading.text -%}
-                    {%- if site.data.featured_topic.subheading.link -%}
-                    <a href="{{ site.data.featured_topic.subheading.link }}">{{ site.data.featured_topic.subheading.text }}</a>
+                    {%- if ft.subheading.text -%}
+                    {%- if ft.subheading.link -%}
+                    <a href="{{ ft.subheading.link }}">{{ ft.subheading.text }}</a>
                     {%- else -%}
-                    {{ site.data.featured_topic.subheading.text }}
+                    {{ ft.subheading.text }}
                     {%- endif -%}
                     {%- endif -%}
                     {%- if jekyll.environment != "production" %}[DEV]{% endif -%}
