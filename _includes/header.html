@@ -6,7 +6,11 @@
             if site.data.featured_topic.enabled or jekyll.environment != "production"
             -%}<span class="special-subtitle">
                     {%- if site.data.featured_topic.subheading.text -%}
+                    {%- if site.data.featured_topic.subheading.link -%}
                     <a href="{{ site.data.featured_topic.subheading.link }}">{{ site.data.featured_topic.subheading.text }}</a>
+                    {%- else -%}
+                    {{ site.data.featured_topic.subheading.text }}
+                    {%- endif -%}
                     {%- endif -%}
                     {%- if jekyll.environment != "production" %}[DEV]{% endif -%}
                 </span>
