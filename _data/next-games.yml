@@ -1,6 +1,6 @@
-# - name: 令和8年度 春季大会 3位決定戦
-#   date: 2026年5月17日
-#   start_at: "12:30"
-#   place: 江戸川区臨海球技場
-#   vs: 足立学園
-#   url: /topics/2026/05-10-kosei.html#next
+- name: 令和8年度 春季関東大会 WEEK1
+  date: 2026年5月31日
+  start_at: "15:30"
+  place: 日大下高井戸グラウンド
+  vs: 法政二高
+  url: /topics/2026/05-17-tokyo4th.html#next
