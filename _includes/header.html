@@ -4,7 +4,7 @@
         <div class="title1">
             {%- assign ft = site.data.featured_topic -%}
             <a href="/">OWLS</a>{%-
-            if ft.enabled or jekyll.environment != "production"
+            if ft.subheading.text or jekyll.environment != "production"
             -%}<span class="special-subtitle">
                     {%- if ft.subheading.text -%}
                     {%- if ft.subheading.link -%}

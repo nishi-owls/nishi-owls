@@ -5,7 +5,7 @@ social_description: "都立西高アメフト部OWLS公式HP。都立西高の�
 <script src="/assets/js/slide.js"></script>
 <div id="slideGalley">
     <ul class="slide">
-        {% if site.data.featured_topic.enabled and site.data.featured_topic.slide.image %}
+        {% if site.data.featured_topic.slide.image %}
         {% capture img_content %}<img src="/assets/images/{{ site.data.featured_topic.slide.image }}" alt="">{% endcapture %}
         {% if site.data.featured_topic.slide.link %}
         <li><a href="{{ site.data.featured_topic.slide.link }}">{{ img_content }}</a></li>
