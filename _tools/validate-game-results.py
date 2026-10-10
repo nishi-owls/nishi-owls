@@ -8,8 +8,7 @@ This script checks that the 'result' field in game files matches the actual scor
 - result: tie => our_score == vs_score
 
 Also checks for:
-- Field name typos (e.g., 'out_scores' instead of 'our_scores')
-- Missing required fields (result, our_score, vs_score)
+- Missing required fields (result, our_score, vs_score, our_scores, vs_scores)
 - Score sum validation: sum(our_scores) == our_score and sum(vs_scores) == vs_score
 
 Usage:
@@ -60,22 +59,23 @@ def validate_game_file(file_path):
             'details': f"Missing required fields (result={result}, our_score={our_score}, vs_score={vs_score})"
         }
 
-    # Check for typos in field names
     issues = []
-    if 'out_scores' in frontmatter:
-        issues.append("Found 'out_scores' (should be 'our_scores')")
 
     # Validate score sums
-    our_scores = frontmatter.get('our_scores', [])
-    vs_scores = frontmatter.get('vs_scores', [])
+    our_scores = frontmatter.get('our_scores')
+    vs_scores = frontmatter.get('vs_scores')
 
     # Calculate sum of scores (excluding non-numeric values like '○' for tiebreakers)
-    if our_scores:
+    if not our_scores:
+        issues.append("Missing 'our_scores'")
+    else:
         our_scores_sum = sum(s for s in our_scores if isinstance(s, (int, float)))
         if our_scores_sum != our_score:
             issues.append(f"Score sum mismatch: sum(our_scores) = {our_scores_sum} but our_score = {our_score}")
 
-    if vs_scores:
+    if not vs_scores:
+        issues.append("Missing 'vs_scores'")
+    else:
         vs_scores_sum = sum(s for s in vs_scores if isinstance(s, (int, float)))
         if vs_scores_sum != vs_score:
             issues.append(f"Score sum mismatch: sum(vs_scores) = {vs_scores_sum} but vs_score = {vs_score}")
