@@ -10,15 +10,24 @@ This script checks that the 'result' field in game files matches the actual scor
 Also checks for:
 - Missing required fields (result, our_score, vs_score, our_scores, vs_scores)
 - Score sum validation: sum(our_scores) == our_score and sum(vs_scores) == vs_score
+- 'season' field exists, is 'spring' or 'fall', and matches the month of 'date'
+  (spring: Apr-Jul, fall: Sep-Dec)
 
 Usage:
     python3 _tools/validate-game-results.py
 """
 
+import datetime
 import os
+import re
 import sys
 import yaml
 from pathlib import Path
+
+SEASON_MONTHS = {
+    'spring': range(4, 8),
+    'fall': range(9, 13),
+}
 
 def extract_frontmatter(file_path):
     """Extract YAML frontmatter from a Jekyll file."""
@@ -40,6 +49,14 @@ def extract_frontmatter(file_path):
         print(f"Error parsing YAML in {file_path}: {e}", file=sys.stderr)
         return None
 
+def get_month(date):
+    """Return the month of a frontmatter date, or None if unparseable."""
+    if isinstance(date, (datetime.date, datetime.datetime)):
+        return date.month
+    # YAML loads non-zero-padded dates (e.g. 2019-4-28) as strings
+    m = re.match(r'^\d{4}-(\d{1,2})-\d{1,2}', str(date))
+    return int(m.group(1)) if m else None
+
 def validate_game_file(file_path):
     """Validate a single game file."""
     frontmatter = extract_frontmatter(file_path)
@@ -60,6 +77,18 @@ def validate_game_file(file_path):
         }
 
     issues = []
+
+    # game_year layout splits games into spring/fall by this field
+    season = frontmatter.get('season')
+    if season not in SEASON_MONTHS:
+        issues.append(f"Invalid season: season={season!r} (must be one of {', '.join(SEASON_MONTHS)})")
+    else:
+        date = frontmatter.get('date')
+        month = get_month(date)
+        if month is None:
+            issues.append(f"Invalid date: date={date!r}")
+        elif month not in SEASON_MONTHS[season]:
+            issues.append(f"Season mismatch: season='{season}' but date={date} is in month {month}")
 
     # Validate score sums
     our_scores = frontmatter.get('our_scores')
