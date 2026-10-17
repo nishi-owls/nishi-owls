@@ -10,12 +10,7 @@ layout: default
 
 <h2 style="clear:both">他のメッセージ</h2>
 
-{% assign messages = "" | split: "" %}
-{% for msg in site.messages %}
-{% unless page.url == msg.url %}
-{% assign messages = messages | push: msg %}
-{% endunless %}
-{% endfor %}
+{% assign messages = site.messages | where_exp: "msg", "msg.url != page.url" %}
 
 {% include messages_list.html messages=messages %}
 
