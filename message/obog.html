@@ -10,12 +10,9 @@ social_image: "/assets/images/message/obog-og-image.jpg"
 
 {% assign featured = "" | split: "" %}
 {% for id in site.data.featured-messages %}
-{% for msg in site.messages %}
-{% assign name = msg.path | split: "/" | last | split: "." | first %}
-{% if name == id %}
-{% assign featured = featured | push: msg %}
-{% endif %}
-{% endfor %}{% endfor %}
+{% assign msg = site.messages | where: "slug", id | first %}
+{% if msg %}{% assign featured = featured | push: msg %}{% endif %}
+{% endfor %}
 
 {%- comment -%}
 TODO: CSSで記事の後半を隠しているが、そもそもHTMLにも不要なのでいい感じに削れると良い。
@@ -32,8 +29,7 @@ TODO: CSSで記事の後半を隠しているが、そもそもHTMLにも不要�
 
 {% assign others = "" | split: "" %}
 {% for msg in site.messages %}
-{% assign name = msg.path | split: "/" | last | split: "." | first %}
-{% unless site.data.featured-messages contains name %}
+{% unless site.data.featured-messages contains msg.slug %}
 {% assign others = others | push: msg %}
 {% endunless %}
 {% endfor %}
