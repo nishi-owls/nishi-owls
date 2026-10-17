@@ -60,13 +60,7 @@ layout: default
 {% endfor %}
 
 {% for tag in page.tags %}
-{% assign related = "" | split: "" %}
-{% for post in site.posts %}
-{% if post.tags contains tag and post.url != page.url %}
-{% assign related = related | push: post %}
-{% if related.size >= 6 %}{% break %}{% endif %}
-{% endif %}
-{% endfor %}
+{% assign related = site.posts | where_exp: "post", "post.tags contains tag and post.url != page.url" | slice: 0, 6 %}
 {% if related.size > 0 and site.data.topics-tags[tag] %}
 <section class="related-posts">
     <h2>{{ site.data.topics-tags[tag].name }}の最近の記事</h2>
