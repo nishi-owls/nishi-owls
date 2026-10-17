@@ -11,18 +11,17 @@ title: 過去の戦績
         <th>年</th>
         <th>戦績</th>
     </tr>
+    {%- assign archive_urls = site.archives | map: "url" %}
     {% for row in site.data.old-games %}
-    {%- assign gameyear = nil -%}
-    {%- for archive in site.archives -%}
-    {%- assign archiveYear = archive.date | date: "%Y" -%}
-    {%- if archiveYear == row.year %}{% assign gameyear = archive %}{% endif -%}
-    {% endfor %}
+    {%- capture year_url %}/game/{{ row.year }}/{% endcapture -%}
+    {%- assign archive_url = nil -%}
+    {%- if archive_urls contains year_url %}{% assign archive_url = year_url %}{% endif %}
     <tr>
         <td class='col-year'>
-            {% if gameyear %}<a href='{{gameyear.url}}'>{% endif %}
+            {% if archive_url %}<a href='{{ archive_url }}'>{% endif %}
                 {{ row.year }}<br />
                 ({{ row.jyear }})<br />
-                {% if gameyear %}</a>{% endif %}
+                {% if archive_url %}</a>{% endif %}
         </td>
         <td class='col-results'>{{ row.results }}</td>
     </tr>
