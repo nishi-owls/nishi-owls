@@ -13,7 +13,7 @@
         vs. {{ game.vs }}
     </div>
     <div class="game-result-list-col">
-        {% if game.result == 'win' %}○{% elsif game.result == 'lose' %}×{% else %}△{% endif %}
+        {% include result_mark.html result=game.result %}
         <span class="score">{{ game.our_score }} - {{ game.vs_score }}</span>
     </div>
 </a>
