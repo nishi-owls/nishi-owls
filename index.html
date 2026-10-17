@@ -54,16 +54,16 @@ social_description: "都立西高アメフト部OWLS公式HP。都立西高の�
             {% endfor %}
         </div>
     </div>{% endif %}<div class="top-games-unit">
-        {% assign latest_game = site.games | last %}
-        {% assign latest_year = latest_game.date | date: "%Y" %}
+        {% assign latest_archive = site.archives | where: "type", "year" | last %}
+        {% assign latest_year_games = latest_archive.posts %}
+        {% assign latest_game = latest_year_games | first %}
+        {% assign recent_games = latest_year_games | where: "season", latest_game.season %}
         <h2 id="recent-games">
             <span class="material-icons">sports_football</span>
             <span>RECENT GAMES</span>
         </h2>
         <div class="top-games-container">
-            {% for game in site.games reversed %}{%
-                assign this_year = game.date | date: "%Y" %}{%
-                    if this_year == latest_year and latest_game.season == game.season %}
+            {% for game in recent_games %}
             <p>
                 <a href="{{ game.url }}">
                     <span class="sub-info">
@@ -78,7 +78,7 @@ social_description: "都立西高アメフト部OWLS公式HP。都立西高の�
                     </span>
                 </a>
             </p>
-            {% endif %}{% endfor %}
+            {% endfor %}
             <p class="more-link">
                 <a href="/game/">
                     more
