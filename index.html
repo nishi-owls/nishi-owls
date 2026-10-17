@@ -72,7 +72,7 @@ social_description: "都立西高アメフト部OWLS公式HP。都立西高の�
                         @ {{ game.place }}<br />
                     </span>
                     <span class="main-info">
-                        {% if game.result == 'win' %}○{% elsif game.result == 'lose' %}×{% else %}△{% endif %}
+                        {% include result_mark.html result=game.result %}
                         <span class="score">{{ game.our_score }} - {{ game.vs_score }}</span>
                         vs. {{ game.vs }}
                     </span>
