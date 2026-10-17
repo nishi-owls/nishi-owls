@@ -4,7 +4,7 @@ layout: default
 
 {% include breadcrumb.html list="/game/, 試合結果" %}
 
-{% assign: year = page.date | date: "%Y" %}
+{% assign year = page.date | date: "%Y" %}
 <h1 id="bg3">{{ year }}年の試合結果一覧</h1>
 
 {% include game_year_select.html %}
