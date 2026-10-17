@@ -29,17 +29,8 @@ layout: default
 
 {% for tag in page.tags %}
 
-{% assign p_post = page.previous %}
-{% for unused in site.posts %}{% comment %}actually while-loop{% endcomment %}
-{% if p_post == nil or p_post.tags contains tag %}{% break %}{% endif %}
-{% assign p_post = p_post.previous %}
-{% endfor %}
-
-{% assign n_post = page.next %}
-{% for unused in site.posts %}{% comment %}actually while-loop{% endcomment %}
-{% if n_post == nil or n_post.tags contains tag %}{% break %}{% endif %}
-{% assign n_post = n_post.next %}
-{% endfor %}
+{% assign p_post = page | previous_in_tag: tag %}
+{% assign n_post = page | next_in_tag: tag %}
 
 <div class="topics-navigation">
     {% if p_post %}

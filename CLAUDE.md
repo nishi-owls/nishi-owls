@@ -70,6 +70,8 @@ Install dependencies: `pip install -r _tools/requirements.txt`
 {{ "_data/member.csv" | file_date: "%Y-%m-%d" }}  {%- # → "YYYY-MM-DD" -%}
 ```
 
+**`tag_neighbors.rb`** — Liquid filters `previous_in_tag` / `next_in_tag` returning the older/newer post that shares a tag.
+
 **`archives/jekyll-archives.rb`** — Generates year-level game archive pages from `_game_years/`.
 
 # Workflows
