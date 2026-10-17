@@ -3,8 +3,9 @@ layout: default
 ---
 
 {% assign first_tag = page.tags | first %}
-{% if first_tag and site.data.topics-tags[first_tag] %}
-{% capture bc_list %}/topics/, トピックス, /topics/{{ site.data.topics-tags[first_tag].page }}, {{ site.data.topics-tags[first_tag].name }}{% endcapture %}
+{% assign first_tag_info = site.data.topics-tags[first_tag] %}
+{% if first_tag_info %}
+{% capture bc_list %}/topics/, トピックス, /topics/{{ first_tag_info.page }}, {{ first_tag_info.name }}{% endcapture %}
 {% else %}
 {% assign bc_list = "/topics/, トピックス" %}
 {% endif %}
@@ -15,9 +16,9 @@ layout: default
 <p class='topics-content-header'>
     <span class='date'>{{ page.date | date: "%Y年%m月%d日" }}</span>
     <span class='tags'>
-        {% for tag in page.tags %}{% if site.data.topics-tags[tag] %}
-        <a href="/topics/{{ site.data.topics-tags[tag].page }}">
-            {{ site.data.topics-tags[tag].name }}
+        {% for tag in page.tags %}{% assign tag_info = site.data.topics-tags[tag] %}{% if tag_info %}
+        <a href="/topics/{{ tag_info.page }}">
+            {{ tag_info.name }}
         </a>{% endif %}
         {% endfor %}
     </span>
@@ -52,14 +53,15 @@ layout: default
 
 {% for tag in page.tags %}
 {% assign related = site.posts | where_exp: "post", "post.tags contains tag and post.url != page.url" | slice: 0, 6 %}
-{% if related.size > 0 and site.data.topics-tags[tag] %}
+{% assign tag_info = site.data.topics-tags[tag] %}
+{% if related.size > 0 and tag_info %}
 <section class="related-posts">
-    <h2>{{ site.data.topics-tags[tag].name }}の最近の記事</h2>
+    <h2>{{ tag_info.name }}の最近の記事</h2>
     {% include topics_list.html posts=related %}
 </section>
 {% endif %}
 {% endfor %}
 
-{% for tag in page.tags %}{% if site.data.topics-tags[tag] %}
-<p><a href="/topics/{{ site.data.topics-tags[tag].page }}">{{ site.data.topics-tags[tag].name }}の記事一覧へ</a></p>
+{% for tag in page.tags %}{% assign tag_info = site.data.topics-tags[tag] %}{% if tag_info %}
+<p><a href="/topics/{{ tag_info.page }}">{{ tag_info.name }}の記事一覧へ</a></p>
 {% endif %}{% endfor %}
