@@ -89,10 +89,7 @@ social_description: "都立西高アメフト部OWLS公式HP。都立西高の�
 </div>
 
 <h2 class="toppage-heading">TOPICS</h2>
-{% assign posts_to_show = "" | split: "" %}
-{% for post in site.posts limit: 6 %}
-{% assign posts_to_show = posts_to_show | push: post %}
-{% endfor %}
+{% assign posts_to_show = site.posts | slice: 0, 6 %}
 {% include topics_list.html posts=posts_to_show %}
 
 <div class="top-more-button">

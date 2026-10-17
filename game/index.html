@@ -10,12 +10,7 @@ title: 試合結果
 
 <p>詳細なゲームレポートは、クリックで表示されます。</p>
 
-{% assign games = "" | split: "" %}
-{% for game in site.games reversed %}
-{% if 3 >= forloop.index %}
-{% assign games=games | push: game %}
-{% endif %}
-{% endfor %}
+{% assign games = site.games | reverse | slice: 0, 3 %}
 {% include games_list.html games=games %}
 
 <h2>過去の試合結果</h2>
