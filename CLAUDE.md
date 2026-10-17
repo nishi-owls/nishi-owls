@@ -61,7 +61,6 @@ Install dependencies: `pip install -r _tools/requirements.txt`
 - **`check-names.py`**: Validates `vs`, `vs_full`, filename slug, and `place` in game files against `known-names.yml`; also checks `next-games.yml`
 - **`validate-game-results.py`**: Validates `result` field, required fields, and quarter score sums
 - **`staff-photo/main.py`**: Crops `assets_data/staff/<name>.jpg` originals to consistently framed 300×360 photos in `assets/images/staff/` (referenced by `photo` in `staff.csv`). Has its own dependencies: `pip install -r _tools/staff-photo/requirements.txt`; see `--help` for usage
-- **`parse-results-table/main.py`**: Converts text-based possession tables to Markdown (`python3 _tools/parse-results-table/main.py < input.txt`)
 
 # Plugins
 
