@@ -10,3 +10,6 @@ vendor/
 
 # Mac OS
 .DS_Store
+
+# Python
+__pycache__/
