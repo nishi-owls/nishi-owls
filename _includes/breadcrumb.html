@@ -8,8 +8,8 @@
         <meta itemprop="position" content="1" />
     </li>
     {% for i in (1..num) %}
-    {% assign idx = i | plus: i | plus: -2 %}{% assign url = list[idx] %}
-    {% assign idx = i | plus: i | plus: -1 %}{% assign name = list[idx] %}
+    {% assign idx = i | times: 2 | minus: 2 %}{% assign url = list[idx] %}
+    {% assign idx = idx | plus: 1 %}{% assign name = list[idx] %}
     <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
         <a itemprop="item" href="{{ url }}">
             <span itemprop="name">{{ name }}</span>
